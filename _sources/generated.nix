@@ -6,6 +6,24 @@
   dockerTools,
 }:
 {
+  aioshutil = {
+    pname = "aioshutil";
+    version = "v1.6";
+    src = fetchFromGitHub {
+      owner = "kumaraditya303";
+      repo = "aioshutil";
+      tag = "v1.6";
+      hash = "sha256-+8BpL9CVH0X/9H7vL4xuV5CdA3A10a2A1q4wt1x1sSM=";
+    };
+  };
+  cn2an = {
+    pname = "cn2an";
+    version = "0.5.24";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/c/cn2an/cn2an-0.5.24.tar.gz";
+      hash = "sha256-wnbPxLPJ51ghSEHeWXUC6xeN5QuNomM+00VWT5BwXw4=";
+    };
+  };
   docker-proxy = {
     pname = "docker-proxy";
     version = "v5.1.3";
@@ -47,6 +65,45 @@
     };
     date = "2026-07-11";
   };
+  jieba-next = {
+    pname = "jieba-next";
+    version = "v1.0.0rc1";
+    src = fetchFromGitHub {
+      owner = "mxcoras";
+      repo = "jieba-next";
+      tag = "v1.0.0rc1";
+      hash = "sha256-9xZjuK4oD/5A1ElXNtTbDmpoGNz/poWnGjTdzSX+AzE=";
+    };
+  };
+  moviepilot = {
+    pname = "moviepilot";
+    version = "v2.15.5";
+    src = fetchFromGitHub {
+      owner = "jxxghp";
+      repo = "MoviePilot";
+      tag = "v2.15.5";
+      hash = "sha256-q9owgrfP9uZvwMwi7HFizXc1JR+J/eoTtIXhxcI9Q2s=";
+    };
+  };
+  moviepilot-frontend = {
+    pname = "moviepilot-frontend";
+    version = "v2.15.5";
+    src = fetchurl {
+      url = "https://github.com/jxxghp/MoviePilot-Frontend/releases/download/v2.15.5/dist.zip";
+      hash = "sha256-YrtGJV72AYZQ4Ku38DwrHmTA3h8whX++8kn2jroCz4w=";
+    };
+  };
+  moviepilot-resources = {
+    pname = "moviepilot-resources";
+    version = "11c6951ea9dd250c13ad4bbcb91feb1dc7ffa2f2";
+    src = fetchgit {
+      url = "https://github.com/jxxghp/MoviePilot-Resources";
+      rev = "11c6951ea9dd250c13ad4bbcb91feb1dc7ffa2f2";
+      fetchSubmodules = false;
+      hash = "sha256-Q+Abt0KP6N/a4JyFzGPSrGQMk7XVoRKuyFgQdZC2tzw=";
+    };
+    date = "2026-08-07";
+  };
   nexus-media = {
     pname = "nexus-media";
     version = "v4.4.5";
@@ -67,6 +124,32 @@
       hash = "sha256-bQ/HOvGeMTRh6qwQEaV3083D7mfDZ6eT+0FGFR8ncl8=";
     };
   };
+  pinyin2hanzi = {
+    pname = "pinyin2hanzi";
+    version = "0.1.1";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/P/Pinyin2Hanzi/Pinyin2Hanzi-0.1.1.tar.gz";
+      hash = "sha256-g/dsGaOJdCUjNDRSBmrw+s7npbh4RD1xtzb2hnmrzVY=";
+    };
+  };
+  proces = {
+    pname = "proces";
+    version = "0.1.7";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/p/proces/proces-0.1.7.tar.gz";
+      hash = "sha256-cKBdnpc91oX3qQksWL5pWoGBpBHWN5bCEyMv0/3EN3U=";
+    };
+  };
+  pyromark = {
+    pname = "pyromark";
+    version = "v0.9.13";
+    src = fetchFromGitHub {
+      owner = "monosans";
+      repo = "pyromark";
+      tag = "v0.9.13";
+      hash = "sha256-lyU3GtkAbZekqXj7JOeKZQALf5s1J8umDwJZU8NRDW4=";
+    };
+  };
   sun-panel = {
     pname = "sun-panel";
     version = "v1.8.1";
@@ -75,6 +158,26 @@
       repo = "sun-panel";
       tag = "v1.8.1";
       hash = "sha256-tdjNcCKZadKQQ/sZuEY43rhKea5Z1zZHesq87ACSC44=";
+    };
+  };
+  telegramify-markdown = {
+    pname = "telegramify-markdown";
+    version = "pypi_1.2.0";
+    src = fetchFromGitHub {
+      owner = "sudoskys";
+      repo = "telegramify-markdown";
+      tag = "pypi_1.2.0";
+      hash = "sha256-pfYmIXbhHl545cwSMkjDGlmR6g5n5vqIOiYLcGiVOVg=";
+    };
+  };
+  torrentool = {
+    pname = "torrentool";
+    version = "v1.2.0";
+    src = fetchFromGitHub {
+      owner = "idlesign";
+      repo = "torrentool";
+      tag = "v1.2.0";
+      hash = "sha256-S7Cp5Qqk7/vaTbqiXfFSz8Kh5MSOYhNse8XRHkNy2Q0=";
     };
   };
   vaults3-linux-amd64 = {
@@ -101,6 +204,16 @@
       repo = "vertex";
       tag = "v0.17.0";
       hash = "sha256-QCk96rmZwWK91V05rcd36OGCPbbKYvP68GvRllwkKlA=";
+    };
+  };
+  zhconv-rs = {
+    pname = "zhconv-rs";
+    version = "v0.4.1";
+    src = fetchFromGitHub {
+      owner = "Gowee";
+      repo = "zhconv-rs";
+      tag = "v0.4.1";
+      hash = "sha256-uzw8iC02nPVVYhw4QHgEYRRmkI85/Hq3xaEaOtDygwo=";
     };
   };
 }

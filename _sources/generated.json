@@ -1,4 +1,40 @@
 {
+    "aioshutil": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "aioshutil",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "kumaraditya303",
+            "repo": "aioshutil",
+            "rev": "v1.6",
+            "sha256": "sha256-+8BpL9CVH0X/9H7vL4xuV5CdA3A10a2A1q4wt1x1sSM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.6"
+    },
+    "cn2an": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "cn2an",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-wnbPxLPJ51ghSEHeWXUC6xeN5QuNomM+00VWT5BwXw4=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/c/cn2an/cn2an-0.5.24.tar.gz"
+        },
+        "version": "0.5.24"
+    },
     "docker-proxy": {
         "cargoLock": null,
         "date": null,
@@ -82,6 +118,83 @@
         },
         "version": "19a208b6a24b173f9ced1aaf6d120aa36758e9e5"
     },
+    "jieba-next": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "jieba-next",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mxcoras",
+            "repo": "jieba-next",
+            "rev": "v1.0.0rc1",
+            "sha256": "sha256-9xZjuK4oD/5A1ElXNtTbDmpoGNz/poWnGjTdzSX+AzE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.0rc1"
+    },
+    "moviepilot": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "moviepilot",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "jxxghp",
+            "repo": "MoviePilot",
+            "rev": "v2.15.5",
+            "sha256": "sha256-q9owgrfP9uZvwMwi7HFizXc1JR+J/eoTtIXhxcI9Q2s=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.15.5"
+    },
+    "moviepilot-frontend": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "moviepilot-frontend",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-YrtGJV72AYZQ4Ku38DwrHmTA3h8whX++8kn2jroCz4w=",
+            "type": "url",
+            "url": "https://github.com/jxxghp/MoviePilot-Frontend/releases/download/v2.15.5/dist.zip"
+        },
+        "version": "v2.15.5"
+    },
+    "moviepilot-resources": {
+        "cargoLock": null,
+        "date": "2026-08-07",
+        "extract": null,
+        "name": "moviepilot-resources",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "11c6951ea9dd250c13ad4bbcb91feb1dc7ffa2f2",
+            "sha256": "sha256-Q+Abt0KP6N/a4JyFzGPSrGQMk7XVoRKuyFgQdZC2tzw=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/jxxghp/MoviePilot-Resources"
+        },
+        "version": "11c6951ea9dd250c13ad4bbcb91feb1dc7ffa2f2"
+    },
     "nexus-media": {
         "cargoLock": null,
         "date": null,
@@ -124,6 +237,57 @@
         },
         "version": "v4.4.5"
     },
+    "pinyin2hanzi": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "pinyin2hanzi",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-g/dsGaOJdCUjNDRSBmrw+s7npbh4RD1xtzb2hnmrzVY=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/P/Pinyin2Hanzi/Pinyin2Hanzi-0.1.1.tar.gz"
+        },
+        "version": "0.1.1"
+    },
+    "proces": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "proces",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-cKBdnpc91oX3qQksWL5pWoGBpBHWN5bCEyMv0/3EN3U=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/p/proces/proces-0.1.7.tar.gz"
+        },
+        "version": "0.1.7"
+    },
+    "pyromark": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "pyromark",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "monosans",
+            "repo": "pyromark",
+            "rev": "v0.9.13",
+            "sha256": "sha256-lyU3GtkAbZekqXj7JOeKZQALf5s1J8umDwJZU8NRDW4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.9.13"
+    },
     "sun-panel": {
         "cargoLock": null,
         "date": null,
@@ -144,6 +308,48 @@
             "type": "github"
         },
         "version": "v1.8.1"
+    },
+    "telegramify-markdown": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "telegramify-markdown",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "sudoskys",
+            "repo": "telegramify-markdown",
+            "rev": "pypi_1.2.0",
+            "sha256": "sha256-pfYmIXbhHl545cwSMkjDGlmR6g5n5vqIOiYLcGiVOVg=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "pypi_1.2.0"
+    },
+    "torrentool": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "torrentool",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "idlesign",
+            "repo": "torrentool",
+            "rev": "v1.2.0",
+            "sha256": "sha256-S7Cp5Qqk7/vaTbqiXfFSz8Kh5MSOYhNse8XRHkNy2Q0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.2.0"
     },
     "vaults3-linux-amd64": {
         "cargoLock": null,
@@ -195,5 +401,26 @@
             "type": "github"
         },
         "version": "v0.17.0"
+    },
+    "zhconv-rs": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "zhconv-rs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Gowee",
+            "repo": "zhconv-rs",
+            "rev": "v0.4.1",
+            "sha256": "sha256-uzw8iC02nPVVYhw4QHgEYRRmkI85/Hq3xaEaOtDygwo=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.4.1"
     }
 }
