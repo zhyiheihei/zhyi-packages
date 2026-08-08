@@ -1,6 +1,3 @@
-this derivation will be built:
-  /nix/store/lpfpghpj9k90vv3m8m9942ys3z5fiq2r-README.md.drv
-building '/nix/store/lpfpghpj9k90vv3m8m9942ys3z5fiq2r-README.md.drv'...
 # zhyiheihei's NUR Packages
 
 ![Build and populate cache](https://github.com/zhyiheihei/zhyi-packages/workflows/Build%20and%20populate%20cache/badge.svg)
