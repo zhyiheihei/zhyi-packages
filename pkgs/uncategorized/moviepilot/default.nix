@@ -166,6 +166,7 @@ pkgs.python3Packages.buildPythonPackage rec {
       pystray
       pytelegrambotapi
       pyvirtualdisplay
+      python-multipart
       pywebpush
       pyyaml
       qbittorrent-api
