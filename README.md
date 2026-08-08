@@ -43,7 +43,7 @@ Personal NUR repository, structured after
 | `docker-proxy-hubcmdui` | [Docker-Proxy](https://github.com/dqzboy/Docker-Proxy) | 5.1.3 | Web management panel for the Docker-Proxy registry proxy |
 | `vertex` | [vertex](https://github.com/vertex-center/vertex) | 0.17.0 | Self-hosted lab manager for one-click container service installation |
 
-> `nexus-media-web` 与 `vertex` 的前端 Web 构建仍在收尾，当前仓库先交付可用的后端/核心服务。
+> `vertex` 的前端 Web 构建仍在收尾，当前仓库先交付可用的后端服务。
 
 ## Development
 
