@@ -86,6 +86,8 @@ buildGoModule (finalAttrs: {
 
   preBuild = ''
     go-bindata-assetfs -o=assets/bindata.go -pkg=assets assets/...
+    echo "bindata head:"
+    head -5 assets/bindata.go
   '';
 
   postInstall = ''
