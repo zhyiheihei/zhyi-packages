@@ -16,6 +16,9 @@ let
     offlineCache = yarn-berry_4.fetchYarnBerryDeps {
       inherit (finalWebAttrs) src;
       hash = lib.fakeHash;
+      missingHashes = {
+        "@esbuild/aix-ppc64@npm:0.19.12" = lib.fakeHash;
+      };
     };
 
     nativeBuildInputs = [
@@ -44,7 +47,7 @@ buildGoModule (finalAttrs: {
 
   sourceRoot = "${finalAttrs.src.name}/server";
 
-  vendorHash = lib.fakeHash;
+  vendorHash = "sha256-mfNCIyIGJF5+u5kZrJi+iXjoyao/0l5MfJFxT+Wz6Vs=";
 
   env.CGO_ENABLED = "0";
   env.GOPROXY = "https://goproxy.cn,direct";
