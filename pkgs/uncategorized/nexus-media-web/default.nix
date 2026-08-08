@@ -66,10 +66,9 @@ stdenv.mkDerivation (finalAttrs: {
     rm -rf "$SASS_DIR/dart-sass"
     cp -r /tmp/sass-embedded/package/dart-sass "$SASS_DIR/"
     chmod -R +x "$SASS_DIR/dart-sass"
-    patchelf --set-interpreter "$(cat ${stdenv.cc.libc}/nix-support/dynamic-linker)" \
+    patchelf --set-interpreter "${stdenv.cc.libc}/lib/ld-linux-x86-64.so.2" \
       --set-rpath "${lib.makeLibraryPath [ stdenv.cc.cc.lib ]}" \
       "$SASS_DIR/dart-sass/src/dart"
-    patchelf --print-interpreter "$SASS_DIR/dart-sass/src/dart"
   '';
 
   buildPhase = ''
