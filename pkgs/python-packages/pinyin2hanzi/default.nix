@@ -20,5 +20,11 @@ buildPythonPackage rec {
     homepage = "https://github.com/someus/Pinyin2Hanzi";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
+    maintainers = [
+      {
+        github = "zhyiheihei";
+        name = "zhyiheihei";
+      }
+    ];
   };
 }

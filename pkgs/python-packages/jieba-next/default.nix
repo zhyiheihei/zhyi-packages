@@ -41,5 +41,11 @@ buildPythonPackage rec {
     homepage = "https://github.com/mxcoras/jieba-next";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
+    maintainers = [
+      {
+        github = "zhyiheihei";
+        name = "zhyiheihei";
+      }
+    ];
   };
 }

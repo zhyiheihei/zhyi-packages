@@ -23,5 +23,11 @@ buildPythonPackage rec {
     homepage = "https://github.com/Ailln/cn2an";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
+    maintainers = [
+      {
+        github = "zhyiheihei";
+        name = "zhyiheihei";
+      }
+    ];
   };
 }

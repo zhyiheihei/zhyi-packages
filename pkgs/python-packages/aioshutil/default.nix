@@ -25,5 +25,11 @@ buildPythonPackage rec {
     homepage = "https://github.com/kumaraditya303/aioshutil";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
+    maintainers = [
+      {
+        github = "zhyiheihei";
+        name = "zhyiheihei";
+      }
+    ];
   };
 }

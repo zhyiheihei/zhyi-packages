@@ -43,5 +43,11 @@ buildPythonPackage rec {
     homepage = "https://github.com/Gowee/zhconv-rs";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
+    maintainers = [
+      {
+        github = "zhyiheihei";
+        name = "zhyiheihei";
+      }
+    ];
   };
 }

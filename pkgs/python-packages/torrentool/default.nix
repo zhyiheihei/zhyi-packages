@@ -22,5 +22,11 @@ buildPythonPackage rec {
     homepage = "https://github.com/idlesign/torrentool";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
+    maintainers = [
+      {
+        github = "zhyiheihei";
+        name = "zhyiheihei";
+      }
+    ];
   };
 }
