@@ -96,12 +96,12 @@ buildGoModule (finalAttrs: {
     mv $out/bin/sun-panel $out/libexec/sun-panel
     cat > $out/bin/sun-panel <<EOF
     #!/bin/sh
-    DATA_DIR="''${SUN_PANEL_DATA_DIR:-''${XDG_DATA_HOME:-$HOME/.local/share}/sun-panel}"
-    mkdir -p "$DATA_DIR"
-    if [ ! -e "$DATA_DIR/web" ]; then
-      ln -s $out/share/sun-panel/web "$DATA_DIR/web"
+    DATA_DIR="\${SUN_PANEL_DATA_DIR:-\${XDG_DATA_HOME:-\$HOME/.local/share}/sun-panel}"
+    mkdir -p "\$DATA_DIR"
+    if [ ! -e "\$DATA_DIR/web" ]; then
+      ln -s $out/share/sun-panel/web "\$DATA_DIR/web"
     fi
-    cd "$DATA_DIR"
+    cd "\$DATA_DIR"
     exec $out/libexec/sun-panel "\$@"
     EOF
     chmod +x $out/bin/sun-panel
