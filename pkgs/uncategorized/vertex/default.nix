@@ -2,6 +2,7 @@
   lib,
   stdenv,
   buildGoModule,
+  jq,
   nodejs,
   yarn-berry_4,
   sources,
@@ -17,7 +18,7 @@ let
 
     postPatch = ''
       printf 'approvedGitRepositories: ["**"]\nenableScripts: true\n' >> .yarnrc.yml
-      perl -0pi -e 's/,\s*"packageManager":\s*"[^"]*"//' package.json
+      jq 'del(.packageManager)' package.json > package.json.tmp && mv package.json.tmp package.json
     '';
 
     offlineCache = yarn-berry_4.fetchYarnBerryDeps {
@@ -27,6 +28,7 @@ let
     };
 
     nativeBuildInputs = [
+      jq
       nodejs
       yarn-berry_4
       yarn-berry_4.yarnBerryConfigHook
