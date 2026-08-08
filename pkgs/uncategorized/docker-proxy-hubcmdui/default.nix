@@ -37,7 +37,7 @@ let
     installPhase = ''
       runHook preInstall
       mkdir -p $out
-      cp -r web/dist $out/dist
+      cp -r ../web/dist $out/dist
       runHook postInstall
     '';
   });
