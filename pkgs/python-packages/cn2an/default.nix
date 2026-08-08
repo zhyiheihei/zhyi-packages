@@ -14,6 +14,8 @@ buildPythonPackage rec {
 
   dependencies = [ proces ];
 
+  env.PIP_INDEX_URL = "https://pypi.tuna.tsinghua.edu.cn/simple";
+
   pythonImportsCheck = [ "cn2an" ];
 
   meta = {

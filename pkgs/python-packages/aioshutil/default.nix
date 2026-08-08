@@ -16,6 +16,7 @@ buildPythonPackage rec {
   ];
 
   env.SETUPTOOLS_SCM_PRETEND_VERSION = version;
+  env.PIP_INDEX_URL = "https://pypi.tuna.tsinghua.edu.cn/simple";
 
   pythonImportsCheck = [ "aioshutil" ];
 

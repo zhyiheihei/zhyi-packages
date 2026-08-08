@@ -15,6 +15,8 @@ buildPythonPackage rec {
 
   dependencies = [ pyromark ];
 
+  env.PIP_INDEX_URL = "https://pypi.tuna.tsinghua.edu.cn/simple";
+
   pythonImportsCheck = [ "telegramify_markdown" ];
 
   meta = {

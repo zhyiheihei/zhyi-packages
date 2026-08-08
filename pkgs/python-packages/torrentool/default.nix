@@ -13,6 +13,8 @@ buildPythonPackage rec {
 
   doCheck = false;
 
+  env.PIP_INDEX_URL = "https://pypi.tuna.tsinghua.edu.cn/simple";
+
   pythonImportsCheck = [ "torrentool" ];
 
   meta = {

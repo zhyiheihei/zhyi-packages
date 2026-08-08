@@ -26,6 +26,8 @@ buildPythonPackage rec {
 
   maturinBuildFlags = [ "-m" "pyo3/Cargo.toml" ];
 
+  env.PIP_INDEX_URL = "https://pypi.tuna.tsinghua.edu.cn/simple";
+
   postPatch = ''
     cp README.md pyo3/README.md
   '';

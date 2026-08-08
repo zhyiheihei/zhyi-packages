@@ -1,5 +1,6 @@
 {
   lib,
+  pkgs,
   sources,
   python3,
   python3Packages,
@@ -8,7 +9,7 @@
   makeWrapper,
 }:
 let
-  cn2an = python3Packages.buildPythonPackage {
+  cn2an = pkgs.python3Packages.buildPythonPackage {
     pname = "cn2an";
     version = "0.5.24";
     pyproject = true;
@@ -17,12 +18,12 @@ let
       version = "0.5.24";
       hash = lib.fakeHash;
     };
-    build-system = [ python3Packages.setuptools ];
+    build-system = [ pkgs.python3Packages.setuptools ];
     dependencies = [ proces ];
     doCheck = false;
   };
 
-  proces = python3Packages.buildPythonPackage {
+  proces = pkgs.python3Packages.buildPythonPackage {
     pname = "proces";
     version = "0.1.7";
     pyproject = true;
@@ -31,11 +32,11 @@ let
       version = "0.1.7";
       hash = lib.fakeHash;
     };
-    build-system = [ python3Packages.setuptools ];
+    build-system = [ pkgs.python3Packages.setuptools ];
     doCheck = false;
   };
 
-  iso639 = python3Packages.buildPythonPackage {
+  iso639 = pkgs.python3Packages.buildPythonPackage {
     pname = "iso639";
     version = "0.1.4";
     format = "setuptools";
@@ -47,7 +48,7 @@ let
     doCheck = false;
   };
 
-  bencodepy = python3Packages.buildPythonPackage {
+  bencodepy = pkgs.python3Packages.buildPythonPackage {
     pname = "bencodepy";
     version = "0.9.5";
     format = "setuptools";
@@ -60,7 +61,7 @@ let
     doCheck = false;
   };
 
-  pypushdeer = python3Packages.buildPythonPackage {
+  pypushdeer = pkgs.python3Packages.buildPythonPackage {
     pname = "pypushdeer";
     version = "0.0.3";
     pyproject = true;
@@ -69,12 +70,12 @@ let
       version = "0.0.3";
       hash = lib.fakeHash;
     };
-    build-system = [ python3Packages.setuptools ];
-    dependencies = [ python3Packages.requests ];
+    build-system = [ pkgs.python3Packages.setuptools ];
+    dependencies = [ pkgs.python3Packages.requests ];
     doCheck = false;
   };
 
-  serverchan-sdk = python3Packages.buildPythonPackage {
+  serverchan-sdk = pkgs.python3Packages.buildPythonPackage {
     pname = "serverchan-sdk";
     version = "1.0.6";
     pyproject = true;
@@ -83,12 +84,12 @@ let
       version = "1.0.6";
       hash = lib.fakeHash;
     };
-    build-system = [ python3Packages.setuptools ];
-    dependencies = [ python3Packages.requests ];
+    build-system = [ pkgs.python3Packages.setuptools ];
+    dependencies = [ pkgs.python3Packages.requests ];
     doCheck = false;
   };
 
-  opencc-python-reimplemented = python3Packages.buildPythonPackage {
+  opencc-python-reimplemented = pkgs.python3Packages.buildPythonPackage {
     pname = "opencc-python-reimplemented";
     version = "0.1.7";
     pyproject = true;
@@ -97,7 +98,7 @@ let
       version = "0.1.7";
       hash = lib.fakeHash;
     };
-    build-system = [ python3Packages.setuptools ];
+    build-system = [ pkgs.python3Packages.setuptools ];
     doCheck = false;
   };
 
@@ -107,7 +108,7 @@ let
     hash = lib.fakeHash;
   };
 
-  fast-bencode = python3Packages.buildPythonPackage {
+  fast-bencode = pkgs.python3Packages.buildPythonPackage {
     pname = "fast-bencode";
     version = "1.1.8";
     pyproject = true;
@@ -125,17 +126,17 @@ let
     doCheck = false;
   };
 in
-python3Packages.buildPythonApplication (finalAttrs: {
+pkgs.python3Packages.buildPythonApplication (finalAttrs: {
   pname = "nexus-media";
   inherit (sources.nexus-media) version src;
   pyproject = true;
 
   build-system = [
-    python3Packages.setuptools
-    python3Packages.wheel
+    pkgs.python3Packages.setuptools
+    pkgs.python3Packages.wheel
   ];
 
-  propagatedBuildInputs = with python3Packages; [
+  propagatedBuildInputs = with pkgs.python3Packages; [
     alembic
     anitopy
     apscheduler

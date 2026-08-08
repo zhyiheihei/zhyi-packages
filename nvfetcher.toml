@@ -39,3 +39,53 @@ src.github = "vastsa/FileCodeBox"
 [filecodebox-frontend]
 fetch.git = "https://github.com/vastsa/FileCodeBoxFronted.git"
 src.git = "https://github.com/vastsa/FileCodeBoxFronted.git"
+
+[moviepilot]
+fetch.github = "jxxghp/MoviePilot"
+src.github = "jxxghp/MoviePilot"
+
+[moviepilot-frontend]
+fetch.url = "https://github.com/jxxghp/MoviePilot-Frontend/releases/download/$ver/dist.zip"
+src.github_tag = "jxxghp/MoviePilot-Frontend"
+src.include_regex = "^v2\\.\\d+\\.\\d+$"
+
+[moviepilot-resources]
+fetch.git = "https://github.com/jxxghp/MoviePilot-Resources"
+src.git = "https://github.com/jxxghp/MoviePilot-Resources"
+src.branch = "main"
+
+[zhconv-rs]
+fetch.github = "Gowee/zhconv-rs"
+src.github = "Gowee/zhconv-rs"
+
+[jieba-next]
+fetch.github = "mxcoras/jieba-next"
+src.github_tag = "mxcoras/jieba-next"
+
+[pinyin2hanzi]
+fetch.pypi = "Pinyin2Hanzi"
+src.pypi = "Pinyin2Hanzi"
+
+[aioshutil]
+fetch.github = "kumaraditya303/aioshutil"
+src.github_tag = "kumaraditya303/aioshutil"
+
+[torrentool]
+fetch.github = "idlesign/torrentool"
+src.github_tag = "idlesign/torrentool"
+
+[telegramify-markdown]
+fetch.github = "sudoskys/telegramify-markdown"
+src.github = "sudoskys/telegramify-markdown"
+
+[pyromark]
+fetch.github = "monosans/pyromark"
+src.github = "monosans/pyromark"
+
+[cn2an]
+fetch.pypi = "cn2an"
+src.pypi = "cn2an"
+
+[proces]
+fetch.pypi = "proces"
+src.pypi = "proces"
