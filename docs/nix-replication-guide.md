@@ -21,11 +21,12 @@ xddxdd/nur-packages 是目前结构最完整、工作流最成熟的个人 NUR �
 
 ## 2. 当前仓库状态（2026-08-08）
 
-- 分支：`main`，最新提交 `5b5259d`；
+- 分支：`main`，最新提交 `cc54ccc`；
 - 包：`uncategorized` 9 个，`python3Packages` 11 个，共 20 个可构建属性；
 - 缓存：Attic，`https://attic.zhyi.xin/lantian`；
 - 更新：`auto-update.yml` 每天 UTC 20:13 触发；
-- CI：所有 Build workflow 仍为红色，原因见第 4 节。
+- CI：`check-package-meta` 已绿；`test-nur-eval` 仍红，等待 NUR 注册 PR
+  [nix-community/NUR#1197](https://github.com/nix-community/NUR/pull/1197) 合并。
 
 ## 3. 上游对照
 
@@ -45,8 +46,8 @@ xddxdd/nur-packages 是目前结构最完整、工作流最成熟的个人 NUR �
 | `.github/workflows/build.yml` | `update?repo=xddxdd` | `update?repo=zhyiheihei` | 仅名字差异 |
 | `.github/workflows/auto-update.yml` | bot 为 `xddxdd-bot` | bot 为 `zhyiheihei-bot` | 仅名字差异 |
 | `pkgs/` | kernel-modules、lantian-customized、nvidia-grid 等 | 仅 python/uncategorized | 包规模差异 |
-| `LICENSE` | MIT | 缺失 | 必须补 |
-| NUR 注册 | 已注册 | 未注册 | 必须做 |
+| `LICENSE` | MIT | 已添加 MIT（保留上游版权） | 已对齐 |
+| NUR 注册 | 已注册 | PR #1197 已开，checks 全绿 | 等待合并 |
 
 ### 3.2 与 nix-community/NUR 的关系
 
@@ -93,7 +94,8 @@ failed to evaluate zhyiheihei
 `check_package_meta.py` 要求每个新包至少一个 maintainer，且 GitHub 用户名必须是
 `zhyiheihei`。已为 `aioshutil`、`cn2an`、`jieba-next`、`pinyin2hanzi`、
 `proces`、`pyromark`、`telegramify-markdown`、`torrentool`、`zhconv-rs`
-补齐 `meta.maintainers`，下一步在远端重跑验证。
+补齐 `meta.maintainers`，并已由 GitHub Actions 的 `check-package-meta` job
+验证通过。
 
 ## 5. 复刻路线
 
@@ -119,8 +121,10 @@ failed to evaluate zhyiheihei
 
 - 添加 MIT `LICENSE`（已添加，满足 NUR PR 模板要求）；
 - 给 9 个 python 包补 `meta.maintainers`（已补齐）；
+- 给预编译二进制包补 `meta.sourceProvenance`（`vaults3` 已补
+  `lib.sourceTypes.binaryNativeCode`）；
 - 检查每个包是否有 `description`、`homepage`、`license`、`mainProgram`；
-- 在远端执行 `nix run .#nur-check` 和 `tools/check_package_meta.py`，全部通过。
+- `tools/check_package_meta.py` 已由 GitHub Actions 验证通过。
 
 ### 阶段 2：注册 NUR
 
@@ -141,7 +145,9 @@ failed to evaluate zhyiheihei
 3. 运行 `./bin/nur format-manifest` 保证排序；
 4. 只提交 `repos.json`，不提交 `repos.json.lock`；
 5. 向 `nix-community/NUR` 开 PR；
-6. PR 合并后重跑我们的 Build workflow。
+6. 当前 PR 为 [nix-community/NUR#1197](https://github.com/nix-community/NUR/pull/1197)，
+   两个检查均通过，等待合并；
+7. PR 合并后重跑我们的 Build workflow。
 
 注册后，`test-nur-eval` 应全绿，`nur-update` 的 webhook 才有意义。
 
@@ -178,7 +184,7 @@ failed to evaluate zhyiheihei
 ## 6. 验证清单
 
 - [ ] 本地 `git status` 干净；
-- [ ] `tools/check_package_meta.py` 通过；
+- [x] `tools/check_package_meta.py` 通过（GitHub Actions 已验证）；
 - [ ] 远端 `nix run .#nur-check` 通过；
 - [ ] `nix-community/NUR` 注册 PR 已合并；
 - [ ] Build workflow 三个 job 全绿；
