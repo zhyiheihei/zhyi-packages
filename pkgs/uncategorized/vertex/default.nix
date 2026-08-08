@@ -16,9 +16,7 @@ let
     offlineCache = yarn-berry_4.fetchYarnBerryDeps {
       inherit (finalWebAttrs) src;
       hash = lib.fakeHash;
-      missingHashes = {
-        "@esbuild/aix-ppc64@npm:0.19.12" = lib.fakeHash;
-      };
+      n = ./missing-hashes.json;
     };
 
     nativeBuildInputs = [
