@@ -43,6 +43,11 @@ stdenv.mkDerivation (finalAttrs: {
   env.CI = "true";
   env.NODE_OPTIONS = "--max-old-space-size=4096";
 
+  postPatch = ''
+    sed -i 's|"pnpm": ">=11.0.0"|"pnpm": ">=10.0.0"|' package.json
+    sed -i 's|"packageManager": "pnpm@11.8.0"|"packageManager": "pnpm@10.34.5"|' package.json
+  '';
+
   preBuild = ''
     pnpm -r run stub --if-present
   '';
