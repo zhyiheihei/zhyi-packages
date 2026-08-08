@@ -229,6 +229,7 @@ pkgs.python3Packages.buildPythonPackage rec {
   '';
 
   meta = {
+    changelog = "https://github.com/jxxghp/MoviePilot/releases/tag/v${version}";
     description = "Media automation platform for downloads, organization, scraping and notifications";
     homepage = "https://github.com/jxxghp/MoviePilot";
     license = lib.licenses.gpl3Only;
