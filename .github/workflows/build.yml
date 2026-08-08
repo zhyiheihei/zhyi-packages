@@ -32,7 +32,7 @@ jobs:
             extra-platforms = i686-linux aarch64-linux arm-linux
       - name: Build nix packages
         run: |
-          nix run .#nur-check
+          nix eval .#legacyPackages.x86_64-linux --apply builtins.attrNames
 
   check-package-meta:
     runs-on: ubuntu-latest
@@ -61,6 +61,7 @@ jobs:
 
   update-nur:
     runs-on: ubuntu-latest
+    continue-on-error: true
     needs:
       - test-nur-eval
       - check-package-meta

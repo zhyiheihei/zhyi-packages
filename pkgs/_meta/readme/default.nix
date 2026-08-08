@@ -95,6 +95,17 @@ writeTextFile {
     home-assistant, linkwarden, memos and metacubexd) are intentionally not
     duplicated here.
 
+    ## Binary Cache
+
+    Build artifacts are cached in the Attic binary cache:
+
+    ```nix
+    {
+      nix.settings.substituters = [ "${_meta.atticUrl}" ];
+      nix.settings.trusted-public-keys = [ "${_meta.atticPublicKey}" ];
+    }
+    ```
+
     ## How to use
 
     ```nix

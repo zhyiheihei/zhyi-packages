@@ -1,9 +1,9 @@
 rec {
-  # Binary cache keys. Fill these in once a cache is configured.
-  cachixUrl = "https://zhyiheihei.cachix.org";
-  cachixPublicKey = "zhyiheihei.cachix.org-1:";
+  # Attic binary cache
+  atticUrl = "https://attic.zhyi.xin/lantian";
+  atticPublicKey = "lantian:Pi7qMC8lIOrR8cTh4vfcRuSL/z+Bh5BAFYlEo/mbq2U=";
 
   # Backwards compatibility
-  url = cachixUrl;
-  publicKey = cachixPublicKey;
+  url = atticUrl;
+  publicKey = atticPublicKey;
 }
