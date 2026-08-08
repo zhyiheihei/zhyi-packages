@@ -44,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     pnpmConfigHook
     pnpm_10
     makeWrapper
+    patchelf
     python3
   ];
 
@@ -59,12 +60,12 @@ stdenv.mkDerivation (finalAttrs: {
     mkdir -p /tmp/sass-embedded
     tar -xzf ${sassEmbedded} -C /tmp/sass-embedded
     SASS_DIR="node_modules/.pnpm/sass-embedded-linux-x64@1.100.0/node_modules/sass-embedded-linux-x64"
-    echo "SASS_DIR=$SASS_DIR"
-    ls -la "$SASS_DIR" 2>&1 | head -10 || true
     rm -rf "$SASS_DIR/dart-sass"
     cp -r /tmp/sass-embedded/package/dart-sass "$SASS_DIR/"
     chmod -R +x "$SASS_DIR/dart-sass"
-    ls -la "$SASS_DIR/dart-sass/src" 2>&1 | head -10 || true
+    patchelf --set-interpreter "$(cat ${stdenv.cc.libc}/nix-support/dynamic-linker)" \
+      --set-rpath "${lib.makeLibraryPath [ stdenv.cc.cc.lib ]}" \
+      "$SASS_DIR/dart-sass/src/dart"
     pnpm -r run stub --if-present
   '';
 
