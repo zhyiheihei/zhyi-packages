@@ -17,8 +17,12 @@ let
 
     sourceRoot = "${finalAttrs.src.name}/hubcmdui/src";
 
+    postPatch = ''
+      sed -i 's|https://registry.npmjs.org/|https://registry.npmmirror.com/|g' package-lock.json
+    '';
+
     npmDeps = fetchNpmDeps {
-      inherit (finalAttrs) src sourceRoot;
+      inherit (finalAttrs) src sourceRoot postPatch;
       name = "docker-proxy-hubcmdui-web-npm-deps";
       hash = lib.fakeHash;
       npmRegistryOverridesString = builtins.toJSON {
