@@ -13,6 +13,17 @@ Packages already provided by nixpkgs (such as seerr, freshrss, halo,
 home-assistant, linkwarden, memos and metacubexd) are intentionally not
 duplicated here.
 
+## Binary Cache
+
+Build artifacts are cached in the Attic binary cache:
+
+```nix
+{
+  nix.settings.substituters = [ "https://attic.zhyi.xin/lantian" ];
+  nix.settings.trusted-public-keys = [ "lantian:Pi7qMC8lIOrR8cTh4vfcRuSL/z+Bh5BAFYlEo/mbq2U=" ];
+}
+```
+
 ## How to use
 
 ```nix
