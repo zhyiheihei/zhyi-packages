@@ -41,6 +41,7 @@ xddxdd/nur-packages 是目前结构最完整、工作流最成熟的个人 NUR �
 | `tools/postprocess_nvfetcher.py` | 与本地一致 | 一致 | 已对齐 |
 | `tools/check_package_meta.py` | 要求 `xddxdd` | 要求 `zhyiheihei` | 仅用户名差异 |
 | `flake-modules/_internal/commands.nix` | `update-hashes` 限定三个目录 | 用 `find pkgs` 通用化 | 合理适配 |
+| `flake-modules/_internal/commands.nix` | nur-combined 全量 clone | nur-combined 加 `--depth=1` 浅克隆 | 性能适配，语义不变 |
 | `.github/workflows/build.yml` | `update?repo=xddxdd` | `update?repo=zhyiheihei` | 仅名字差异 |
 | `.github/workflows/auto-update.yml` | bot 为 `xddxdd-bot` | bot 为 `zhyiheihei-bot` | 仅名字差异 |
 | `pkgs/` | kernel-modules、lantian-customized、nvidia-grid 等 | 仅 python/uncategorized | 包规模差异 |
