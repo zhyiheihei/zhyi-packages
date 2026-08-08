@@ -202,7 +202,7 @@ pkgs.python3Packages.buildPythonApplication (finalAttrs: {
   nativeBuildInputs = [ makeWrapper ];
 
   dontWrapPythonPrograms = true;
-  dontCheckPythonRuntimeDeps = true;
+  dontCheckRuntimeDeps = true;
 
   env.PIP_INDEX_URL = "https://pypi.tuna.tsinghua.edu.cn/simple";
 

@@ -13,10 +13,12 @@ let
     pname = "vertex-web";
     inherit version src;
 
+    missingHashes = ./missing-hashes.json;
+
     offlineCache = yarn-berry_4.fetchYarnBerryDeps {
       inherit (finalWebAttrs) src;
       hash = lib.fakeHash;
-      n = ./missing-hashes.json;
+      missingHashes = ./missing-hashes.json;
     };
 
     nativeBuildInputs = [
