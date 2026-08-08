@@ -3,9 +3,7 @@
   pkgs,
   sources,
   python3,
-  python3Packages,
   fetchPypi,
-  rustPlatform,
   makeWrapper,
 }:
 let
