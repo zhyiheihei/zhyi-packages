@@ -27,6 +27,7 @@
 - 优点：增量 CI 精确，远程构建和二进制缓存友好。
 - 代价：依赖变化时要重新生成；有 IFD 和 manual 两种策略。
 - 适用：大型 Rust workspace、需要精确增量构建时。
+- 详细笔记：[crate2nix 增量构建模型](./nix-community-crate2nix.md)
 
 ### naersk
 
