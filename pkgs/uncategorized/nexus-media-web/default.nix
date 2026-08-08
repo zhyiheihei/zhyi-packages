@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     pnpmInstallFlags = [ "--registry=https://registry.npmmirror.com" ];
     prePnpmInstall = ''
       sed -i 's|"pnpm": ">=11.0.0"|"pnpm": ">=10.0.0"|' package.json
-      sed -i '/"packageManager"/d' package.json
+      sed -i 's|"packageManager": "pnpm@11.8.0"|"packageManager": "pnpm@10.34.5"|' package.json
       echo 'registry=https://registry.npmmirror.com' >> .npmrc
       if [ -n "''${https_proxy:-}" ]; then
         PROXY=$(printf '%s' "$https_proxy" | sed 's|^socks5://|socks5h://|')
