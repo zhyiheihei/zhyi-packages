@@ -4,9 +4,10 @@
   fetchFromGitHub,
   buildGoModule,
   nodejs,
-  pnpm_10,
+  pnpm_9,
   fetchPnpmDeps,
   pnpmConfigHook,
+  go-bindata,
   go-bindata-assetfs,
 }:
 let
@@ -24,7 +25,7 @@ let
 
     pnpmDeps = fetchPnpmDeps {
       inherit (finalWebAttrs) pname version src;
-      pnpm = pnpm_10;
+      pnpm = pnpm_9;
       fetcherVersion = 3;
       hash = lib.fakeHash;
     };
@@ -32,7 +33,7 @@ let
     nativeBuildInputs = [
       nodejs
       pnpmConfigHook
-      pnpm_10
+      pnpm_9
     ];
 
     buildPhase = ''
@@ -63,7 +64,10 @@ buildGoModule (finalAttrs: {
 
   vendorHash = lib.fakeHash;
 
-  nativeBuildInputs = [ go-bindata-assetfs ];
+  nativeBuildInputs = [
+    go-bindata
+    go-bindata-assetfs
+  ];
 
   env.CGO_ENABLED = "1";
 
