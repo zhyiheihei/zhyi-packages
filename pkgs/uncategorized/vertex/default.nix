@@ -17,7 +17,7 @@ let
     missingHashes = ./missing-hashes.json;
 
     postPatch = ''
-      printf 'approvedGitRepositories: ["**"]\nenableScripts: true\n' >> .yarnrc.yml
+      printf 'approvedGitRepositories: ["**"]\nenableScripts: true\nnpmRegistryServer: "https://registry.npmmirror.com"\nenableNetwork: false\n' >> .yarnrc.yml
       jq 'del(.packageManager)' package.json > package.json.tmp && mv package.json.tmp package.json
     '';
 
