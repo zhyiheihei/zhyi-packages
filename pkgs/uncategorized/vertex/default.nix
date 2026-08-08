@@ -17,6 +17,7 @@ let
 
     postPatch = ''
       printf 'approvedGitRepositories: ["**"]\nenableScripts: true\n' >> .yarnrc.yml
+      sed -i '/"packageManager"/d' package.json
     '';
 
     offlineCache = yarn-berry_4.fetchYarnBerryDeps {
