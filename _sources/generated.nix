@@ -6,12 +6,22 @@
   dockerTools,
 }:
 {
+  sun-panel = {
+    pname = "sun-panel";
+    version = "v1.8.1";
+    src = fetchFromGitHub {
+      owner = "hslr-s";
+      repo = "sun-panel";
+      tag = "v1.8.1";
+      hash = "sha256-tdjNcCKZadKQQ/sZuEY43rhKea5Z1zZHesq87ACSC44=";
+    };
+  };
   vaults3-linux-amd64 = {
     pname = "vaults3-linux-amd64";
     version = "4.4.50";
     src = fetchurl {
       url = "https://github.com/Kodiqa-Solutions/VaultS3/releases/download/v4.4.50/vaults3-linux-amd64.tar.gz";
-      sha256 = "sha256-ceRHhnpdoJ5viR81P9XhaqSlT/oxG0RJr+xPrPdDzFs=";
+      hash = "sha256-ceRHhnpdoJ5viR81P9XhaqSlT/oxG0RJr+xPrPdDzFs=";
     };
   };
   vaults3-linux-arm64 = {
@@ -19,7 +29,7 @@
     version = "4.4.50";
     src = fetchurl {
       url = "https://github.com/Kodiqa-Solutions/VaultS3/releases/download/v4.4.50/vaults3-linux-arm64.tar.gz";
-      sha256 = "sha256-DbKcpgcvgJcFvtJ5veQkyd+Os+5Mb56isd0j+GQKxD4=";
+      hash = "sha256-DbKcpgcvgJcFvtJ5veQkyd+Os+5Mb56isd0j+GQKxD4=";
     };
   };
 }
