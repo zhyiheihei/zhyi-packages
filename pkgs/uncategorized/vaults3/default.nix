@@ -10,29 +10,37 @@ let
     else throw "unsupported system: ${stdenv.hostPlatform.system}";
   source = sources."vaults3-linux-${arch}";
 in
-stdenv.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   pname = "vaults3";
-  inherit (source) version;
-  src = source.src;
+  inherit (source) version src;
 
   sourceRoot = ".";
   dontConfigure = true;
   dontBuild = true;
 
   installPhase = ''
+    runHook preInstall
+
     install -D -m 0755 vaults3-linux-${arch} $out/bin/vaults3
     install -D -m 0755 vaults3-cli-linux-${arch} $out/bin/vaults3-cli
+
+    runHook postInstall
   '';
 
-  meta = with lib; {
+  meta = {
     description = "Lightweight S3-compatible object storage with built-in web dashboard";
     homepage = "https://github.com/Kodiqa-Solutions/VaultS3";
-    license = licenses.agpl3Only;
+    license = lib.licenses.agpl3Only;
     platforms = [
       "x86_64-linux"
       "aarch64-linux"
     ];
+    maintainers = [
+      {
+        github = "zhyiheihei";
+        name = "zhyiheihei";
+      }
+    ];
     mainProgram = "vaults3";
   };
-}
-
+})
