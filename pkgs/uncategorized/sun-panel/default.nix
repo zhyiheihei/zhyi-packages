@@ -65,7 +65,7 @@ buildGoModule (finalAttrs: {
 
   nativeBuildInputs = [ go-bindata-assetfs ];
 
-  CGO_ENABLED = 1;
+  env.CGO_ENABLED = "1";
 
   ldflags = [ "-X sun-panel/global.RUNCODE=release" ];
 
