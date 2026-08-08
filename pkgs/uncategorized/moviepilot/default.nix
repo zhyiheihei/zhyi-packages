@@ -159,6 +159,7 @@ pkgs.python3Packages.buildPythonPackage rec {
       pydantic-settings
       pyjwt
       pympler
+      pyopenssl
       pyotp
       pyparsing
       pyquery
