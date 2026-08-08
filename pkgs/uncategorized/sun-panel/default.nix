@@ -28,7 +28,14 @@ let
       pnpm = pnpm_9;
       fetcherVersion = 3;
       pnpmInstallFlags = [ "--registry=https://registry.npmmirror.com" ];
-      prePnpmInstall = "echo 'registry=https://registry.npmmirror.com' >> .npmrc";
+      prePnpmInstall = ''
+        echo 'registry=https://registry.npmmirror.com' >> .npmrc
+        if [ -n "''${https_proxy:-}" ]; then
+          PROXY=$(printf '%s' "$https_proxy" | sed 's|^socks5://|socks5h://|')
+          echo "proxy=$PROXY" >> .npmrc
+          echo "https-proxy=$PROXY" >> .npmrc
+        fi
+      '';
       hash = lib.fakeHash;
     };
 
