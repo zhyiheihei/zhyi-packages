@@ -166,6 +166,7 @@ pkgs.python3Packages.buildPythonApplication (finalAttrs: {
     plexapi
     psutil
     psycopg2-binary
+    pwdlib
     pydantic-ai-slim
     pydantic-settings
     pyjwt
@@ -201,6 +202,7 @@ pkgs.python3Packages.buildPythonApplication (finalAttrs: {
   nativeBuildInputs = [ makeWrapper ];
 
   dontWrapPythonPrograms = true;
+  dontCheckPythonRuntimeDeps = true;
 
   env.PIP_INDEX_URL = "https://pypi.tuna.tsinghua.edu.cn/simple";
 
