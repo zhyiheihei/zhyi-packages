@@ -85,7 +85,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     mkdir -p $out/share/filecodebox/themes
     cp -r . $out/share/filecodebox/
-    cp -r ${frontend}/dist $out/share/filecodebox/themes/2024
+    cp -r ${frontend}/. $out/share/filecodebox/themes/2024
 
     makeWrapper ${python}/bin/python $out/bin/filecodebox \
       --chdir "$out/share/filecodebox" \
