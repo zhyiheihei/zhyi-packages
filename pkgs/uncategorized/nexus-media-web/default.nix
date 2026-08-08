@@ -59,9 +59,12 @@ stdenv.mkDerivation (finalAttrs: {
     mkdir -p /tmp/sass-embedded
     tar -xzf ${sassEmbedded} -C /tmp/sass-embedded
     SASS_DIR="node_modules/.pnpm/sass-embedded-linux-x64@1.100.0/node_modules/sass-embedded-linux-x64"
-    if [ -d "$SASS_DIR" ] && [ ! -e "$SASS_DIR/dart-sass/src/dart" ]; then
-      cp -r /tmp/sass-embedded/package/dart-sass "$SASS_DIR/"
-    fi
+    echo "SASS_DIR=$SASS_DIR"
+    ls -la "$SASS_DIR" 2>&1 | head -10 || true
+    rm -rf "$SASS_DIR/dart-sass"
+    cp -r /tmp/sass-embedded/package/dart-sass "$SASS_DIR/"
+    chmod -R +x "$SASS_DIR/dart-sass"
+    ls -la "$SASS_DIR/dart-sass/src" 2>&1 | head -10 || true
     pnpm -r run stub --if-present
   '';
 
