@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   meta = {
-    changelog = "https://github.com/Kodiqa-Solutions/VaultS3/releases/tag/v${version}";
+    changelog = "https://github.com/Kodiqa-Solutions/VaultS3/releases/tag/v${finalAttrs.version}";
     description = "Lightweight S3-compatible object storage with built-in web dashboard";
     homepage = "https://github.com/Kodiqa-Solutions/VaultS3";
     license = lib.licenses.agpl3Only;
