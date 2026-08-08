@@ -34,6 +34,13 @@ Personal NUR repository, structured after
 | Path | Name | Version | Description |
 | ---- | ---- | ------- | ----------- |
 | `vaults3` | [vaults3](https://github.com/Kodiqa-Solutions/VaultS3) | 4.4.50 | Lightweight S3-compatible object storage with built-in web dashboard |
+| `filecodebox` | [filecodebox](https://github.com/vastsa/FileCodeBox) | 2.5.4 | Lightweight anonymous file sharing server with a FastAPI backend and Vue 3 theme |
+| `moviepilot` | [moviepilot](https://github.com/jxxghp/MoviePilot) | 2.15.5 | Media automation platform for downloads, organization, scraping and notifications |
+| `nexus-media` | [nexus-media](https://github.com/linyuan0213/nexus-media) | 4.4.5 | Media library manager with automated downloading, media organization and subscription workflows |
+| `nexus-media-web` | [nexus-media-web](https://github.com/linyuan0213/nexus-media-web) | latest | Vue 3 web frontend for the Nexus Media media library manager |
+| `sun-panel` | [sun-panel](https://github.com/hslr-s/sun-panel) | 1.3.0 | Server and NAS navigation panel, homepage, browser homepage |
+| `docker-proxy` | [docker-proxy](https://github.com/dqzboy/Docker-Proxy) | 5.1.3 | Self-hosted Docker registry proxy with host-based upstream routing |
+| `vertex` | [vertex](https://github.com/vertex-center/vertex) | 0.17.0 | Self-hosted lab manager for one-click container service installation |
 
 ## Development
 
