@@ -106,7 +106,6 @@ pkgs.python3Packages.buildPythonPackage rec {
 
   propagatedBuildInputs = (with pkgs.python3Packages; [
     aiofiles
-    aioshutil
     aiosqlite
     alembic
     anitopy
@@ -120,7 +119,6 @@ pkgs.python3Packages.buildPythonPackage rec {
     cachetools
     chardet
     click
-    cn2an
     cryptography
     dateparser
     ddgs
@@ -132,7 +130,6 @@ pkgs.python3Packages.buildPythonPackage rec {
     h2
     httpx
     jinja2
-    jieba-next
     langchain
     langchain-anthropic
     langchain-aws
@@ -150,7 +147,6 @@ pkgs.python3Packages.buildPythonPackage rec {
     parse
     passlib
     pillow
-    pinyin2hanzi
     plexapi
     psutil
     psycopg2-binary
@@ -182,8 +178,6 @@ pkgs.python3Packages.buildPythonPackage rec {
     socksio
     sqlalchemy
     starlette
-    telegramify-markdown
-    torrentool
     tqdm
     transmission-rpc
     urllib3

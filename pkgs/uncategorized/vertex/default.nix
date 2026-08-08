@@ -17,7 +17,7 @@ let
 
     offlineCache = yarn-berry_4.fetchYarnBerryDeps {
       inherit (finalWebAttrs) src;
-      hash = lib.fakeHash;
+      hash = "sha256-hg76Ol1wPnyBoJG9B2AX7/RQnqz+JMlEghUA9d2xuZ0=";
       missingHashes = ./missing-hashes.json;
     };
 
