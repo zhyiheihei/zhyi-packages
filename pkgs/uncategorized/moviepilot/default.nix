@@ -204,9 +204,9 @@ pkgs.python3Packages.buildPythonPackage rec {
     runHook preInstall
     mkdir -p $out/share/moviepilot
     cp -r . $out/share/moviepilot/
+    chmod -R u+w $out/share/moviepilot
 
     cp -r ${frontendDist}/. $out/share/moviepilot/public/
-    rm -f $out/share/moviepilot/public/version.txt
     printf '%s\n' "${sources."moviepilot-frontend".version}" > $out/share/moviepilot/public/version.txt
     cp ${frontendRuntime}/libexec/moviepilot/service.js $out/share/moviepilot/public/service.js
     cp -r ${frontendRuntime}/libexec/moviepilot/node_modules $out/share/moviepilot/public/node_modules
