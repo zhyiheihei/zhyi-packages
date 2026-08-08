@@ -27,6 +27,7 @@ let
       inherit (finalWebAttrs) pname version src;
       pnpm = pnpm_9;
       fetcherVersion = 3;
+      pnpmInstallFlags = [ "--registry=https://registry.npmmirror.com" ];
       hash = lib.fakeHash;
     };
 
@@ -70,6 +71,8 @@ buildGoModule (finalAttrs: {
   ];
 
   env.CGO_ENABLED = "1";
+  env.GOPROXY = "https://goproxy.cn,direct";
+  env.GOSUMDB = "sum.golang.google.cn";
 
   ldflags = [ "-X sun-panel/global.RUNCODE=release" ];
 
