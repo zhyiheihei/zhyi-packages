@@ -24,7 +24,7 @@ let
     npmDeps = fetchNpmDeps {
       inherit (finalAttrs) src sourceRoot postPatch;
       name = "docker-proxy-hubcmdui-web-npm-deps";
-      hash = lib.fakeHash;
+      hash = "sha256-FtW9nVP+3RChc3luvncxnUSWByBiXbQlTBWp7m9BZj8=";
       npmRegistryOverridesString = builtins.toJSON {
         "registry.npmjs.org" = "https://registry.npmmirror.com";
       };
