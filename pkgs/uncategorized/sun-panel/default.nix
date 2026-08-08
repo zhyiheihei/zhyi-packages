@@ -28,7 +28,7 @@ let
       pnpm = pnpm_9;
       fetcherVersion = 3;
       pnpmInstallFlags = [ "--registry=https://registry.npmmirror.com" ];
-      prePnpmInstall = "pnpm config set registry https://registry.npmmirror.com";
+      prePnpmInstall = "echo 'registry=https://registry.npmmirror.com' >> .npmrc";
       hash = lib.fakeHash;
     };
 
@@ -64,7 +64,7 @@ buildGoModule (finalAttrs: {
 
   sourceRoot = "${finalAttrs.src.name}/service";
 
-  vendorHash = lib.fakeHash;
+  vendorHash = "sha256-dSwR0Z8r0EtMdLexjtd/WisqFWX6xC57Ve6ar6J4Hqk=";
 
   nativeBuildInputs = [
     go-bindata
