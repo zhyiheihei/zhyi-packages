@@ -122,6 +122,10 @@ let
       version = "1.1.8";
       src = fast-bencode-src;
       hash = lib.fakeHash;
+      nativeBuildInputs = [ pkgs.cargo ];
+      postPatch = ''
+        cargo generate-lockfile
+      '';
     };
     nativeBuildInputs = [
       rustPlatform.cargoSetupHook
