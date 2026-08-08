@@ -16,7 +16,7 @@ let
     src = fetchPypi {
       pname = "cn2an";
       version = "0.5.24";
-      hash = lib.fakeHash;
+      hash = "sha256-wnbPxLPJ51ghSEHeWXUC6xeN5QuNomM+00VWT5BwXw4=";
     };
     build-system = [ pkgs.python3Packages.setuptools ];
     dependencies = [ proces ];
@@ -30,7 +30,7 @@ let
     src = fetchPypi {
       pname = "proces";
       version = "0.1.7";
-      hash = lib.fakeHash;
+      hash = "sha256-cKBdnpc91oX3qQksWL5pWoGBpBHWN5bCEyMv0/3EN3U=";
     };
     build-system = [ pkgs.python3Packages.setuptools ];
     doCheck = false;
@@ -43,7 +43,7 @@ let
     src = fetchPypi {
       pname = "iso639";
       version = "0.1.4";
-      hash = lib.fakeHash;
+      hash = "sha256-iLcM9sZO6cLClyKSgYyL6zLbnqb03h+EcamwgaPZLpg=";
     };
     doCheck = false;
   };
@@ -56,7 +56,7 @@ let
       pname = "bencodepy";
       version = "0.9.5";
       extension = "zip";
-      hash = lib.fakeHash;
+      hash = "sha256-r0chNNc+pY7as8LLLyz2HrnXg5CChMPS1bHP0434ZLg=";
     };
     doCheck = false;
   };
@@ -96,7 +96,7 @@ let
     src = fetchPypi {
       pname = "opencc-python-reimplemented";
       version = "0.1.7";
-      hash = lib.fakeHash;
+      hash = "sha256-T3d+o0YaJSV6e4dhEs+pC7asq8bfuEO/TREmbkNXne4=";
     };
     build-system = [ pkgs.python3Packages.setuptools ];
     doCheck = false;
