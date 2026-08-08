@@ -28,6 +28,7 @@ let
       pnpm = pnpm_9;
       fetcherVersion = 3;
       pnpmInstallFlags = [ "--registry=https://registry.npmmirror.com" ];
+      prePnpmInstall = "pnpm config set registry https://registry.npmmirror.com";
       hash = lib.fakeHash;
     };
 
