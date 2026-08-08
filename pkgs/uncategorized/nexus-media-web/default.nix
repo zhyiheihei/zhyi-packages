@@ -68,6 +68,8 @@ stdenv.mkDerivation (finalAttrs: {
       --set-rpath "${lib.makeLibraryPath [ stdenv.cc.cc.lib ]}" \
       "$SASS_DIR/dart-sass/src/dart"
     pnpm -r run stub --if-present
+    ls -la "$SASS_DIR/dart-sass/src/dart"
+    patchelf --print-interpreter "$SASS_DIR/dart-sass/src/dart"
   '';
 
   buildPhase = ''
