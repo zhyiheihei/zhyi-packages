@@ -29,8 +29,6 @@ let
     })
     doFlatGroupPackages
     doGroupPackages
-    ifNotCI
-    ifNotNUR
     ;
 
   flatGroups = {

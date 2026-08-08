@@ -5,9 +5,12 @@
 }:
 let
   arch =
-    if stdenv.hostPlatform.isAarch64 then "arm64"
-    else if stdenv.hostPlatform.isx86_64 then "amd64"
-    else throw "unsupported system: ${stdenv.hostPlatform.system}";
+    if stdenv.hostPlatform.isAarch64 then
+      "arm64"
+    else if stdenv.hostPlatform.isx86_64 then
+      "amd64"
+    else
+      throw "unsupported system: ${stdenv.hostPlatform.system}";
   source = sources."vaults3-linux-${arch}";
 in
 stdenv.mkDerivation (finalAttrs: {

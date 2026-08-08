@@ -1,10 +1,9 @@
-[vaults3-linux-arm64]
-fetch.url = "https://github.com/Kodiqa-Solutions/VaultS3/releases/download/v$ver/vaults3-linux-arm64.tar.gz"
-src.github = "Kodiqa-Solutions/VaultS3"
-src.prefix = "v"
-
 [vaults3-linux-amd64]
 fetch.url = "https://github.com/Kodiqa-Solutions/VaultS3/releases/download/v$ver/vaults3-linux-amd64.tar.gz"
 src.github = "Kodiqa-Solutions/VaultS3"
 src.prefix = "v"
 
+[vaults3-linux-arm64]
+fetch.url = "https://github.com/Kodiqa-Solutions/VaultS3/releases/download/v$ver/vaults3-linux-arm64.tar.gz"
+src.github = "Kodiqa-Solutions/VaultS3"
+src.prefix = "v"

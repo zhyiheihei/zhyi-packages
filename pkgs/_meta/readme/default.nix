@@ -2,7 +2,6 @@
   writeTextFile,
   callPackage,
   lib,
-  _meta,
   _packages,
 }:
 let
