@@ -8,6 +8,7 @@
   fetchPnpmDeps,
   pnpmConfigHook,
   makeWrapper,
+  patchelf,
   python3,
 }:
 let
