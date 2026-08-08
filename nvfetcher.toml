@@ -1,3 +1,7 @@
+[sun-panel]
+fetch.github = "hslr-s/sun-panel"
+src.github = "hslr-s/sun-panel"
+
 [vaults3-linux-amd64]
 fetch.url = "https://github.com/Kodiqa-Solutions/VaultS3/releases/download/v$ver/vaults3-linux-amd64.tar.gz"
 src.github = "Kodiqa-Solutions/VaultS3"

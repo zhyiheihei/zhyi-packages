@@ -1,7 +1,6 @@
 {
   lib,
   stdenv,
-  fetchFromGitHub,
   buildGoModule,
   nodejs,
   pnpm_9,
@@ -9,15 +8,10 @@
   pnpmConfigHook,
   go-bindata,
   go-bindata-assetfs,
+  sources,
 }:
 let
-  version = "1.3.0";
-  src = fetchFromGitHub {
-    owner = "hslr-s";
-    repo = "sun-panel";
-    rev = "25f46209d97ae7bd6de29c39f93fd4d83932eb06";
-    hash = "sha256-tdjNcCKZadKQQ/sZuEY43rhKea5Z1zZHesq87ACSC44=";
-  };
+  inherit (sources.sun-panel) version src;
 
   web = stdenv.mkDerivation (finalWebAttrs: {
     pname = "sun-panel-web";
@@ -60,14 +54,7 @@ let
 in
 buildGoModule (finalAttrs: {
   pname = "sun-panel";
-  inherit version;
-
-  src = fetchFromGitHub {
-    owner = "hslr-s";
-    repo = "sun-panel";
-    rev = "25f46209d97ae7bd6de29c39f93fd4d83932eb06";
-    hash = "sha256-tdjNcCKZadKQQ/sZuEY43rhKea5Z1zZHesq87ACSC44=";
-  };
+  inherit version src;
 
   sourceRoot = "${finalAttrs.src.name}/service";
 
