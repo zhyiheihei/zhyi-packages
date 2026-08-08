@@ -3,7 +3,7 @@
   stdenv,
   sources,
   nodejs_24,
-  pnpm_11,
+  pnpm_10,
   fetchPnpmDeps,
   pnpmConfigHook,
   makeWrapper,
@@ -16,10 +16,12 @@ stdenv.mkDerivation (finalAttrs: {
   pnpmDeps = fetchPnpmDeps {
     pname = "nexus-media-web-pnpm-deps";
     inherit (finalAttrs) version src;
-    pnpm = pnpm_11;
-    fetcherVersion = 4;
+    pnpm = pnpm_10;
+    fetcherVersion = 3;
     pnpmInstallFlags = [ "--registry=https://registry.npmmirror.com" ];
     prePnpmInstall = ''
+      sed -i 's|"pnpm": ">=11.0.0"|"pnpm": ">=10.0.0"|' package.json
+      sed -i '/"packageManager"/d' package.json
       echo 'registry=https://registry.npmmirror.com' >> .npmrc
       if [ -n "''${https_proxy:-}" ]; then
         PROXY=$(printf '%s' "$https_proxy" | sed 's|^socks5://|socks5h://|')
@@ -33,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     nodejs_24
     pnpmConfigHook
-    pnpm_11
+    pnpm_10
     makeWrapper
     python3
   ];
