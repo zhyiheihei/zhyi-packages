@@ -105,8 +105,12 @@ let
   fast-bencode-src = fetchPypi {
     pname = "fast_bencode";
     version = "1.1.8";
-    hash = lib.fakeHash;
+    hash = "sha256-PHhRcaowoMpnp/JVCNXN+GNrwQk9IbwfJ8LdSS17/LE=";
   };
+
+  slackBolt = pkgs.python3Packages.slack-bolt.overridePythonAttrs (old: {
+    doCheck = false;
+  });
 
   fast-bencode = pkgs.python3Packages.buildPythonPackage {
     pname = "fast-bencode";
@@ -184,7 +188,7 @@ pkgs.python3Packages.buildPythonApplication (finalAttrs: {
     scalar-fastapi
     serverchan-sdk
     setuptools
-    slack-bolt
+    slackBolt
     smbprotocol
     socksio
     sqlalchemy
