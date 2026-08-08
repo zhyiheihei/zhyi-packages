@@ -1,6 +1,20 @@
+this derivation will be built:
+  /nix/store/lpfpghpj9k90vv3m8m9942ys3z5fiq2r-README.md.drv
+building '/nix/store/lpfpghpj9k90vv3m8m9942ys3z5fiq2r-README.md.drv'...
 # zhyiheihei's NUR Packages
 
 ![Build and populate cache](https://github.com/zhyiheihei/zhyi-packages/workflows/Build%20and%20populate%20cache/badge.svg)
+
+## About
+
+This repository follows
+[xddxdd/nur-packages](https://github.com/xddxdd/nur-packages) as its
+upstream reference for project structure and workflows, and supplements
+personal packages that are not natively available in nixpkgs.
+
+Packages already provided by nixpkgs (such as seerr, freshrss, halo,
+home-assistant, linkwarden, memos and metacubexd) are intentionally not
+duplicated here.
 
 ## How to use
 
