@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
         echo "https-proxy=$PROXY" >> .npmrc
       fi
     '';
-    hash = lib.fakeHash;
+    hash = "sha256-UvpWhZMQlneqWgzkmkAAiQ4ysczUEIWUlLNuHhyu1Sc=";
   };
 
   nativeBuildInputs = [
