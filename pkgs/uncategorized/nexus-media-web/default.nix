@@ -58,6 +58,8 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   preBuild = ''
+    pnpm -r run stub --if-present
+
     mkdir -p /tmp/sass-embedded
     tar -xzf ${sassEmbedded} -C /tmp/sass-embedded
     SASS_DIR="node_modules/.pnpm/sass-embedded-linux-x64@1.100.0/node_modules/sass-embedded-linux-x64"
@@ -67,9 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchelf --set-interpreter "$(cat ${stdenv.cc.libc}/nix-support/dynamic-linker)" \
       --set-rpath "${lib.makeLibraryPath [ stdenv.cc.cc.lib ]}" \
       "$SASS_DIR/dart-sass/src/dart"
-    pnpm -r run stub --if-present
-    ls -la "$SASS_DIR/dart-sass/src/dart"
-    patchelf --print-interpreter "$SASS_DIR/dart-sass/src/dart"
   '';
 
   buildPhase = ''
