@@ -13,6 +13,9 @@
 let
   version = sources.moviepilot.version;
   src = sources.moviepilot.src;
+  slackBolt = pkgs.python3Packages.slack-bolt.overridePythonAttrs (old: {
+    doCheck = false;
+  });
 
   frontendDist = stdenv.mkDerivation {
     pname = "moviepilot-frontend";
@@ -42,7 +45,7 @@ let
 
     npmDeps = fetchNpmDeps {
       inherit (finalAttrs) src;
-      hash = lib.fakeHash;
+      hash = "sha256-qKmzuKmkx8W7IRLDWXtmCYoXhOnREypdvOnvMUt5FUg=";
     };
 
     nativeBuildInputs = [
@@ -172,7 +175,7 @@ pkgs.python3Packages.buildPythonPackage rec {
     ruamel-yaml
     setproctitle
     setuptools
-    slack-bolt
+    slackBolt
     slack-sdk
     smbprotocol
     socksio
