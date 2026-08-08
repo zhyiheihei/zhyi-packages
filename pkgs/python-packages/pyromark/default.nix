@@ -27,6 +27,7 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "pyromark" ];
 
   meta = {
+    changelog = "https://github.com/monosans/pyromark/releases/tag/v${version}";
     description = "Blazingly fast Markdown parser";
     homepage = "https://github.com/monosans/pyromark";
     license = lib.licenses.mit;

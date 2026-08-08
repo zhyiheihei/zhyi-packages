@@ -91,6 +91,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   meta = {
+    changelog = "https://github.com/linyuan0213/nexus-media-web/releases/tag/v${finalAttrs.version}";
     description = "Vue 3 web frontend for the Nexus Media media library manager";
     homepage = "https://github.com/linyuan0213/nexus-media-web";
     license = lib.licenses.mit;

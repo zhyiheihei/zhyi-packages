@@ -20,6 +20,7 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "telegramify_markdown" ];
 
   meta = {
+    changelog = "https://github.com/sudoskys/telegramify-markdown/releases/tag/${version}";
     description = "Convert Markdown to Telegram plain text and entities";
     homepage = "https://github.com/sudoskys/telegramify-markdown";
     license = lib.licenses.mit;

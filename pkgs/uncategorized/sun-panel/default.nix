@@ -95,6 +95,7 @@ buildGoModule (finalAttrs: {
   '';
 
   meta = {
+    changelog = "https://github.com/hslr-s/sun-panel/releases/tag/v${finalAttrs.version}";
     description = "Server and NAS navigation panel, homepage, browser homepage";
     homepage = "https://github.com/hslr-s/sun-panel";
     license = lib.licenses.mit;

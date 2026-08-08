@@ -39,6 +39,7 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "zhconv_rs" ];
 
   meta = {
+    changelog = "https://github.com/Gowee/zhconv-rs/releases/tag/v${version}";
     description = "Fast Chinese variant conversion backed by Rust";
     homepage = "https://github.com/Gowee/zhconv-rs";
     license = lib.licenses.gpl2Plus;

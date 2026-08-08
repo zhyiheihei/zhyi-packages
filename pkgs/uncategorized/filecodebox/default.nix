@@ -102,6 +102,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   meta = {
+    changelog = "https://github.com/vastsa/FileCodeBox/releases/tag/v${finalAttrs.version}";
     description = "Lightweight anonymous file sharing server with a FastAPI backend and Vue 3 theme";
     homepage = "https://github.com/vastsa/FileCodeBox";
     license = lib.licenses.lgpl3Only;

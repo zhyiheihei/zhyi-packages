@@ -217,6 +217,7 @@ pkgs.python3Packages.buildPythonApplication (finalAttrs: {
   '';
 
   meta = {
+    changelog = "https://github.com/linyuan0213/nexus-media/releases/tag/v${finalAttrs.version}";
     description = "Media library manager with automated downloading, media organization and subscription workflows";
     homepage = "https://github.com/linyuan0213/nexus-media";
     license = lib.licenses.mit;

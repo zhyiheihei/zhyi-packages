@@ -43,6 +43,7 @@ buildGoModule (finalAttrs: {
   '';
 
   meta = {
+    changelog = "https://github.com/dqzboy/Docker-Proxy/releases/tag/v${finalAttrs.version}";
     description = "Self-hosted Docker registry proxy with host-based upstream routing";
     homepage = "https://github.com/dqzboy/Docker-Proxy";
     license = lib.licenses.asl20;

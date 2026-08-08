@@ -110,6 +110,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   meta = {
+    changelog = "https://github.com/dqzboy/Docker-Proxy/releases/tag/v${finalAttrs.version}";
     description = "Web management panel for the Docker-Proxy registry proxy";
     homepage = "https://github.com/dqzboy/Docker-Proxy";
     license = lib.licenses.asl20;
