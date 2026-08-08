@@ -36,6 +36,17 @@
       hash = "sha256-w7s+iCiUjNvTXsf1ltugUd2rjYFTtpNpgi1zqKPqyEI=";
     };
   };
+  filecodebox-frontend = {
+    pname = "filecodebox-frontend";
+    version = "19a208b6a24b173f9ced1aaf6d120aa36758e9e5";
+    src = fetchgit {
+      url = "https://github.com/vastsa/FileCodeBoxFronted.git";
+      rev = "19a208b6a24b173f9ced1aaf6d120aa36758e9e5";
+      fetchSubmodules = false;
+      hash = "sha256-51oCYsObk3HFBH2fbwZAz7rJRjKVyrnClxqjLTyEONU=";
+    };
+    date = "2026-07-11";
+  };
   nexus-media = {
     pname = "nexus-media";
     version = "v4.4.5";

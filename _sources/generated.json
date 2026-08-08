@@ -62,6 +62,26 @@
         },
         "version": "v2.5.4"
     },
+    "filecodebox-frontend": {
+        "cargoLock": null,
+        "date": "2026-07-11",
+        "extract": null,
+        "name": "filecodebox-frontend",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "19a208b6a24b173f9ced1aaf6d120aa36758e9e5",
+            "sha256": "sha256-51oCYsObk3HFBH2fbwZAz7rJRjKVyrnClxqjLTyEONU=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/vastsa/FileCodeBoxFronted.git"
+        },
+        "version": "19a208b6a24b173f9ced1aaf6d120aa36758e9e5"
+    },
     "nexus-media": {
         "cargoLock": null,
         "date": null,

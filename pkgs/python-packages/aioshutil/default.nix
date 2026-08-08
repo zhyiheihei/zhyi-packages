@@ -1,0 +1,28 @@
+{
+  lib,
+  sources,
+  buildPythonPackage,
+  setuptools,
+  setuptools-scm,
+}:
+buildPythonPackage rec {
+  pname = "aioshutil";
+  inherit (sources.aioshutil) version src;
+  pyproject = false;
+
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
+
+  env.SETUPTOOLS_SCM_PRETEND_VERSION = version;
+
+  pythonImportsCheck = [ "aioshutil" ];
+
+  meta = {
+    description = "Asynchronous shutil module";
+    homepage = "https://github.com/kumaraditya303/aioshutil";
+    license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
+  };
+}
