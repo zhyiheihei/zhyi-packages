@@ -40,6 +40,7 @@ Personal NUR repository, structured after
 | `nexus-media-web` | [nexus-media-web](https://github.com/linyuan0213/nexus-media-web) | latest | Vue 3 web frontend for the Nexus Media media library manager |
 | `sun-panel` | [sun-panel](https://github.com/hslr-s/sun-panel) | 1.3.0 | Server and NAS navigation panel, homepage, browser homepage |
 | `docker-proxy` | [docker-proxy](https://github.com/dqzboy/Docker-Proxy) | 5.1.3 | Self-hosted Docker registry proxy with host-based upstream routing |
+| `docker-proxy-hubcmdui` | [Docker-Proxy](https://github.com/dqzboy/Docker-Proxy) | 5.1.3 | Web management panel for the Docker-Proxy registry proxy |
 | `vertex` | [vertex](https://github.com/vertex-center/vertex) | 0.17.0 | Self-hosted lab manager for one-click container service installation |
 
 ## Development
