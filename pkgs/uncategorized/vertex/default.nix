@@ -1,52 +1,10 @@
 {
   lib,
-  stdenv,
   buildGoModule,
-  jq,
-  nodejs,
-  yarn-berry_4,
   sources,
 }:
 let
   inherit (sources.vertex) version src;
-
-  web = stdenv.mkDerivation (finalWebAttrs: {
-    pname = "vertex-web";
-    inherit version src;
-
-    missingHashes = ./missing-hashes.json;
-
-    postPatch = ''
-      printf 'approvedGitRepositories: ["**"]\nenableScripts: true\nnpmRegistryServer: "https://registry.npmmirror.com"\nenableNetwork: true\n' >> .yarnrc.yml
-      jq 'del(.packageManager)' package.json > package.json.tmp && mv package.json.tmp package.json
-    '';
-
-    offlineCache = yarn-berry_4.fetchYarnBerryDeps {
-      inherit (finalWebAttrs) src;
-      hash = "sha256-hg76Ol1wPnyBoJG9B2AX7/RQnqz+JMlEghUA9d2xuZ0=";
-      missingHashes = ./missing-hashes.json;
-    };
-
-    nativeBuildInputs = [
-      jq
-      nodejs
-      yarn-berry_4
-      yarn-berry_4.yarnBerryConfigHook
-    ];
-
-    buildPhase = ''
-      runHook preBuild
-      yarn workspace @vertex-center/client build
-      runHook postBuild
-    '';
-
-    installPhase = ''
-      runHook preInstall
-      mkdir -p $out/share/vertex
-      cp -r client/dist $out/share/vertex/web
-      runHook postInstall
-    '';
-  });
 in
 buildGoModule (finalAttrs: {
   pname = "vertex";
@@ -76,8 +34,6 @@ buildGoModule (finalAttrs: {
 
   installPhase = ''
     runHook preInstall
-    mkdir -p $out/share/vertex
-    cp -r ${web}/share/vertex/web $out/share/vertex/
     runHook postInstall
   '';
 
