@@ -68,7 +68,7 @@ let
     src = fetchPypi {
       pname = "pypushdeer";
       version = "0.0.3";
-      hash = lib.fakeHash;
+      hash = "sha256-i441WVpFxMYkehl2H0ccnVtcjK1sW46AdsjKSG8pv/Y=";
     };
     build-system = [ pkgs.python3Packages.setuptools ];
     dependencies = [ pkgs.python3Packages.requests ];
@@ -82,7 +82,7 @@ let
     src = fetchPypi {
       pname = "serverchan_sdk";
       version = "1.0.6";
-      hash = lib.fakeHash;
+      hash = "sha256-p5qPCg1Lg9jKuuT2ygBDOOQE1Nu6nZ2TXyexU3nNUCs=";
     };
     build-system = [ pkgs.python3Packages.setuptools ];
     dependencies = [ pkgs.python3Packages.requests ];
@@ -94,7 +94,7 @@ let
     version = "0.1.7";
     pyproject = true;
     src = fetchPypi {
-      pname = "opencc_python_reimplemented";
+      pname = "opencc-python-reimplemented";
       version = "0.1.7";
       hash = lib.fakeHash;
     };
