@@ -30,6 +30,7 @@ buildPythonPackage rec {
 
   postPatch = ''
     cp README.md pyo3/README.md
+    cp ${cargoDeps}/Cargo.lock Cargo.lock
   '';
 
   pythonImportsCheck = [ "zhconv_rs" ];

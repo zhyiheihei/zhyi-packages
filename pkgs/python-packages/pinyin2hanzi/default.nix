@@ -7,7 +7,7 @@
 buildPythonPackage rec {
   pname = "Pinyin2Hanzi";
   inherit (sources.pinyin2hanzi) version src;
-  pyproject = false;
+  format = "setuptools";
 
   build-system = [ setuptools ];
 

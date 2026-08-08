@@ -7,7 +7,7 @@
 buildPythonPackage rec {
   pname = "proces";
   inherit (sources.proces) version src;
-  pyproject = false;
+  format = "setuptools";
 
   build-system = [ setuptools ];
 

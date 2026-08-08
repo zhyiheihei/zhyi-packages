@@ -8,7 +8,7 @@
 buildPythonPackage rec {
   pname = "cn2an";
   inherit (sources.cn2an) version src;
-  pyproject = false;
+  format = "setuptools";
 
   build-system = [ setuptools ];
 

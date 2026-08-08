@@ -7,7 +7,7 @@
 buildPythonPackage rec {
   pname = "torrentool";
   inherit (sources.torrentool) version src;
-  pyproject = false;
+  format = "setuptools";
 
   build-system = [ setuptools ];
 

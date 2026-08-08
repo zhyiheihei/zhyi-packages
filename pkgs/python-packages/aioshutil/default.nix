@@ -8,7 +8,7 @@
 buildPythonPackage rec {
   pname = "aioshutil";
   inherit (sources.aioshutil) version src;
-  pyproject = false;
+  format = "setuptools";
 
   build-system = [
     setuptools
