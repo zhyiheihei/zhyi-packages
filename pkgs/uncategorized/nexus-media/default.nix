@@ -117,19 +117,9 @@ let
     version = "1.1.8";
     pyproject = true;
     src = fast-bencode-src;
-    cargoDeps = rustPlatform.fetchCargoVendor {
-      pname = "fast-bencode";
-      version = "1.1.8";
-      src = fast-bencode-src;
-      hash = lib.fakeHash;
-      nativeBuildInputs = [ pkgs.cargo ];
-      postPatch = ''
-        cargo generate-lockfile
-      '';
-    };
-    nativeBuildInputs = [
-      rustPlatform.cargoSetupHook
-      rustPlatform.maturinBuildHook
+    build-system = with pkgs.python3Packages; [
+      setuptools
+      cython
     ];
     doCheck = false;
   };
