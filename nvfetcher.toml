@@ -2,6 +2,14 @@
 fetch.github = "hslr-s/sun-panel"
 src.github = "hslr-s/sun-panel"
 
+[docker-proxy]
+fetch.github = "dqzboy/Docker-Proxy"
+src.github = "dqzboy/Docker-Proxy"
+
+[docker-proxy-hubcmdui]
+fetch.github = "dqzboy/Docker-Proxy"
+src.github = "dqzboy/Docker-Proxy"
+
 [vaults3-linux-amd64]
 fetch.url = "https://github.com/Kodiqa-Solutions/VaultS3/releases/download/v$ver/vaults3-linux-amd64.tar.gz"
 src.github = "Kodiqa-Solutions/VaultS3"
@@ -11,3 +19,23 @@ src.prefix = "v"
 fetch.url = "https://github.com/Kodiqa-Solutions/VaultS3/releases/download/v$ver/vaults3-linux-arm64.tar.gz"
 src.github = "Kodiqa-Solutions/VaultS3"
 src.prefix = "v"
+
+[vertex]
+fetch.github = "vertex-center/vertex"
+src.github = "vertex-center/vertex"
+
+[nexus-media]
+fetch.github = "linyuan0213/nexus-media"
+src.github = "linyuan0213/nexus-media"
+
+[nexus-media-web]
+fetch.github = "linyuan0213/nexus-media-web"
+src.github = "linyuan0213/nexus-media-web"
+
+[filecodebox]
+fetch.github = "vastsa/FileCodeBox"
+src.github = "vastsa/FileCodeBox"
+
+[filecodebox-frontend]
+fetch.github = "vastsa/FileCodeBoxFronted"
+src.github = "vastsa/FileCodeBoxFronted"

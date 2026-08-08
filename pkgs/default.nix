@@ -32,6 +32,7 @@ let
     ;
 
   flatGroups = {
+    python3Packages = ./python-packages;
     uncategorized = ./uncategorized;
   };
 
