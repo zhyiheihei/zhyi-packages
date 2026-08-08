@@ -92,6 +92,7 @@ buildGoModule (finalAttrs: {
   postInstall = ''
     mkdir -p $out/share/sun-panel
     cp -r ${web} $out/share/sun-panel/web
+    mkdir -p $out/libexec
     mv $out/bin/sun-panel $out/libexec/sun-panel
     cat > $out/bin/sun-panel <<EOF
     #!/bin/sh
