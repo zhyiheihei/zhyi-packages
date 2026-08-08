@@ -1,4 +1,109 @@
 {
+    "docker-proxy": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "docker-proxy",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "dqzboy",
+            "repo": "Docker-Proxy",
+            "rev": "v5.1.3",
+            "sha256": "sha256-F5ritnGnhK6ubMcLKTjbka2alUPNSh3/w4qcJHsBQj0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v5.1.3"
+    },
+    "docker-proxy-hubcmdui": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "docker-proxy-hubcmdui",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "dqzboy",
+            "repo": "Docker-Proxy",
+            "rev": "v5.1.3",
+            "sha256": "sha256-F5ritnGnhK6ubMcLKTjbka2alUPNSh3/w4qcJHsBQj0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v5.1.3"
+    },
+    "filecodebox": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "filecodebox",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "vastsa",
+            "repo": "FileCodeBox",
+            "rev": "v2.5.4",
+            "sha256": "sha256-w7s+iCiUjNvTXsf1ltugUd2rjYFTtpNpgi1zqKPqyEI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.5.4"
+    },
+    "nexus-media": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "nexus-media",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "linyuan0213",
+            "repo": "nexus-media",
+            "rev": "v4.4.5",
+            "sha256": "sha256-humCdjOtktclRsm4equMhQvnyW6EzOVOgu8AFDTOeHM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v4.4.5"
+    },
+    "nexus-media-web": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "nexus-media-web",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "linyuan0213",
+            "repo": "nexus-media-web",
+            "rev": "v4.4.5",
+            "sha256": "sha256-bQ/HOvGeMTRh6qwQEaV3083D7mfDZ6eT+0FGFR8ncl8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v4.4.5"
+    },
     "sun-panel": {
         "cargoLock": null,
         "date": null,
@@ -49,5 +154,26 @@
             "url": "https://github.com/Kodiqa-Solutions/VaultS3/releases/download/v4.4.50/vaults3-linux-arm64.tar.gz"
         },
         "version": "4.4.50"
+    },
+    "vertex": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "vertex",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "vertex-center",
+            "repo": "vertex",
+            "rev": "v0.17.0",
+            "sha256": "sha256-QCk96rmZwWK91V05rcd36OGCPbbKYvP68GvRllwkKlA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.17.0"
     }
 }

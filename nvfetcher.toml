@@ -37,5 +37,5 @@ fetch.github = "vastsa/FileCodeBox"
 src.github = "vastsa/FileCodeBox"
 
 [filecodebox-frontend]
-fetch.github = "vastsa/FileCodeBoxFronted"
-src.github = "vastsa/FileCodeBoxFronted"
+fetch.git = "https://github.com/vastsa/FileCodeBoxFronted.git"
+src.git = "https://github.com/vastsa/FileCodeBoxFronted.git"

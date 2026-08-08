@@ -6,6 +6,56 @@
   dockerTools,
 }:
 {
+  docker-proxy = {
+    pname = "docker-proxy";
+    version = "v5.1.3";
+    src = fetchFromGitHub {
+      owner = "dqzboy";
+      repo = "Docker-Proxy";
+      tag = "v5.1.3";
+      hash = "sha256-F5ritnGnhK6ubMcLKTjbka2alUPNSh3/w4qcJHsBQj0=";
+    };
+  };
+  docker-proxy-hubcmdui = {
+    pname = "docker-proxy-hubcmdui";
+    version = "v5.1.3";
+    src = fetchFromGitHub {
+      owner = "dqzboy";
+      repo = "Docker-Proxy";
+      tag = "v5.1.3";
+      hash = "sha256-F5ritnGnhK6ubMcLKTjbka2alUPNSh3/w4qcJHsBQj0=";
+    };
+  };
+  filecodebox = {
+    pname = "filecodebox";
+    version = "v2.5.4";
+    src = fetchFromGitHub {
+      owner = "vastsa";
+      repo = "FileCodeBox";
+      tag = "v2.5.4";
+      hash = "sha256-w7s+iCiUjNvTXsf1ltugUd2rjYFTtpNpgi1zqKPqyEI=";
+    };
+  };
+  nexus-media = {
+    pname = "nexus-media";
+    version = "v4.4.5";
+    src = fetchFromGitHub {
+      owner = "linyuan0213";
+      repo = "nexus-media";
+      tag = "v4.4.5";
+      hash = "sha256-humCdjOtktclRsm4equMhQvnyW6EzOVOgu8AFDTOeHM=";
+    };
+  };
+  nexus-media-web = {
+    pname = "nexus-media-web";
+    version = "v4.4.5";
+    src = fetchFromGitHub {
+      owner = "linyuan0213";
+      repo = "nexus-media-web";
+      tag = "v4.4.5";
+      hash = "sha256-bQ/HOvGeMTRh6qwQEaV3083D7mfDZ6eT+0FGFR8ncl8=";
+    };
+  };
   sun-panel = {
     pname = "sun-panel";
     version = "v1.8.1";
@@ -30,6 +80,16 @@
     src = fetchurl {
       url = "https://github.com/Kodiqa-Solutions/VaultS3/releases/download/v4.4.50/vaults3-linux-arm64.tar.gz";
       hash = "sha256-DbKcpgcvgJcFvtJ5veQkyd+Os+5Mb56isd0j+GQKxD4=";
+    };
+  };
+  vertex = {
+    pname = "vertex";
+    version = "v0.17.0";
+    src = fetchFromGitHub {
+      owner = "vertex-center";
+      repo = "vertex";
+      tag = "v0.17.0";
+      hash = "sha256-QCk96rmZwWK91V05rcd36OGCPbbKYvP68GvRllwkKlA=";
     };
   };
 }
