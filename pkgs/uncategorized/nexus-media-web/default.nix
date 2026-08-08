@@ -2,6 +2,7 @@
   lib,
   stdenv,
   sources,
+  fetchurl,
   nodejs_24,
   pnpm_10,
   fetchPnpmDeps,
@@ -9,6 +10,12 @@
   makeWrapper,
   python3,
 }:
+let
+  sassEmbedded = fetchurl {
+    url = "https://registry.npmmirror.com/sass-embedded-linux-x64/-/sass-embedded-linux-x64-1.100.0.tgz";
+    hash = "sha256-a0Nc3UlTvYkZ+0BGq7G2BKrb5+hrxA8dNxDKv8VvMCY=";
+  };
+in
 stdenv.mkDerivation (finalAttrs: {
   pname = "nexus-media-web";
   inherit (sources.nexus-media-web) version src;
@@ -49,6 +56,12 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   preBuild = ''
+    mkdir -p /tmp/sass-embedded
+    tar -xzf ${sassEmbedded} -C /tmp/sass-embedded
+    SASS_DIR="node_modules/.pnpm/sass-embedded-linux-x64@1.100.0/node_modules/sass-embedded-linux-x64"
+    if [ -d "$SASS_DIR" ] && [ ! -e "$SASS_DIR/dart-sass/src/dart" ]; then
+      cp -r /tmp/sass-embedded/package/dart-sass "$SASS_DIR/"
+    fi
     pnpm -r run stub --if-present
   '';
 
