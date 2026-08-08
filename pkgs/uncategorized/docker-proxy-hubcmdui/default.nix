@@ -19,6 +19,8 @@ let
 
     postPatch = ''
       sed -i 's|https://registry.npmjs.org/|https://registry.npmmirror.com/|g' package-lock.json
+      mkdir -p ../web
+      chmod -R u+w ../web
     '';
 
     npmDeps = fetchNpmDeps {
