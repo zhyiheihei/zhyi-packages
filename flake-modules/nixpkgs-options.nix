@@ -58,8 +58,9 @@ in
         default = { };
       };
 
-      let
-        mkPatched = n: v:
+      config =
+        let
+          mkPatched = n: v:
           let
             inherit ((import inputs.nixpkgs { inherit system; })) applyPatches;
           in
@@ -72,8 +73,8 @@ in
             }
           else
             v.sourceInput;
-      in
-      config = {
+        in
+        {
         _module.args = lib.mapAttrs (
           n: v:
           lib.mkForce (
