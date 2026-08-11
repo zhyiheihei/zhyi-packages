@@ -170,6 +170,7 @@ pkgs.python3Packages.buildPythonApplication (finalAttrs: {
     pyjwt
     pymysql
     pyquery
+    pyyaml
     pypushdeer
     python-dateutil
     python-hosts
