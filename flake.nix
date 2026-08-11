@@ -125,9 +125,7 @@
               pkgs = pkgsWithCuda;
             };
 
-            packages = lib.filterAttrs (
-              n: v: lib.isDerivation v && !lib.hasSuffix "-patched" n
-            ) legacyPackages;
+            packages = lib.filterAttrs (n: v: lib.isDerivation v && !lib.hasSuffix "-patched" n) legacyPackages;
             packagesWithCuda = lib.filterAttrs (
               n: v: lib.isDerivation v && !lib.hasSuffix "-patched" n
             ) legacyPackagesWithCuda;
