@@ -212,7 +212,7 @@ pkgs.python3Packages.buildPythonApplication (finalAttrs: {
     makeWrapper ${finalAttrs.pythonEnv.interpreter} $out/bin/nexus-media \
       --chdir $out/libexec/nexus-media \
       --run 'if [ -z "''${NEXUS_MEDIA_DATA:-}" ]; then export NEXUS_MEDIA_DATA="''${XDG_DATA_HOME:-$HOME/.local/share}/nexus-media"; fi; export NEXUS_MEDIA_CONFIG="''$NEXUS_MEDIA_DATA/config.yaml"; mkdir -p "''$NEXUS_MEDIA_DATA"' \
-      --set PROJECT_ROOT "$out/share/nexus-media" \
+      --set-default PROJECT_ROOT "$out/share/nexus-media" \
       --prefix PYTHONPATH : "$out/${python3.sitePackages}" \
       --add-flags "$out/libexec/nexus-media/run.py"
   '';
