@@ -58,11 +58,26 @@ in
         default = { };
       };
 
-      config = rec {
+      let
+        mkPatched = n: v:
+          let
+            inherit ((import inputs.nixpkgs { inherit system; })) applyPatches;
+          in
+          # Skip applyPatches if no patch, to avoid IFD when unnecessary
+          if v.patches != [ ] then
+            applyPatches {
+              name = "${n}-patched";
+              src = builtins.toString v.sourceInput;
+              inherit (v) patches;
+            }
+          else
+            v.sourceInput;
+      in
+      config = {
         _module.args = lib.mapAttrs (
           n: v:
           lib.mkForce (
-            import patchedNixpkgs."${n}-patched" {
+            import (mkPatched n v) {
               inherit system;
               config = {
                 inherit (v) allowUnfree permittedInsecurePackages;
@@ -73,24 +88,6 @@ in
               // v.settings;
               inherit (v) overlays;
             }
-          )
-        ) config.nixpkgs-options;
-
-        patchedNixpkgs = lib.mapAttrs' (
-          n: v:
-          let
-            inherit ((import inputs.nixpkgs { inherit system; })) applyPatches;
-          in
-          lib.nameValuePair "${n}-patched" (
-            # Skip applyPatches if no patch, to avoid IFD when unnecessary
-            if v.patches != [ ] then
-              applyPatches {
-                name = "${n}-patched";
-                src = builtins.toString v.sourceInput;
-                inherit (v) patches;
-              }
-            else
-              v.sourceInput
           )
         ) config.nixpkgs-options;
       };
