@@ -60,10 +60,6 @@ src.pypi = "proces"
 fetch.github = "monosans/pyromark"
 src.github = "monosans/pyromark"
 
-[sun-panel]
-fetch.github = "hslr-s/sun-panel"
-src.github = "hslr-s/sun-panel"
-
 [sublinkpro-linux-amd64]
 fetch.url = "https://github.com/ZeroDeng01/sublinkPro/releases/download/v$ver/sublinkPro-linux-amd64"
 src.github = "ZeroDeng01/sublinkPro"
@@ -73,6 +69,10 @@ src.prefix = "v"
 fetch.url = "https://github.com/ZeroDeng01/sublinkPro/releases/download/v$ver/sublinkPro-linux-arm64"
 src.github = "ZeroDeng01/sublinkPro"
 src.prefix = "v"
+
+[sun-panel]
+fetch.github = "hslr-s/sun-panel"
+src.github = "hslr-s/sun-panel"
 
 [tachidesk-server]
 fetch.url = "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v$ver/Suwayomi-Server-v$ver.jar"
