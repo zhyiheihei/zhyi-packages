@@ -62,7 +62,7 @@ in
         _module.args = lib.mapAttrs (
           n: v:
           lib.mkForce (
-            import packages."${n}-patched" {
+            import patchedNixpkgs."${n}-patched" {
               inherit system;
               config = {
                 inherit (v) allowUnfree permittedInsecurePackages;
@@ -76,7 +76,7 @@ in
           )
         ) config.nixpkgs-options;
 
-        packages = lib.mapAttrs' (
+        patchedNixpkgs = lib.mapAttrs' (
           n: v:
           let
             inherit ((import inputs.nixpkgs { inherit system; })) applyPatches;
