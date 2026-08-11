@@ -209,7 +209,7 @@ pkgs.python3Packages.buildPythonApplication (finalAttrs: {
     cp ${finalAttrs.src}/run.py $out/libexec/nexus-media/run.py
     cp -r ${finalAttrs.src}/. $out/share/nexus-media/
     EXTRA_PYTHONPATH=""
-    for dep in $propagatedBuildInputs; do
+    for dep in $pythonPath; do
       if [ -d "$dep/${python3.sitePackages}" ]; then
         EXTRA_PYTHONPATH="$EXTRA_PYTHONPATH:$dep/${python3.sitePackages}"
       fi
