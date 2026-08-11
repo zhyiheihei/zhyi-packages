@@ -69,6 +69,10 @@ _: {
           cp -r "$TMPDIR/lib" nur-index/lib
           cp "$TMPDIR/default.nix" nur-index/default.nix
           mkdir -p nur-index/repos
+          # Realize our locked source outside the index's restricted eval, then
+          # expose it as a local repo path so nur-index does not need IFD.
+          REPO_SOURCE=$(nix-build "$TMPDIR" --no-out-link -A "repo-sources.zhyiheihei")
+          ln -s "$REPO_SOURCE" nur-index/repos/zhyiheihei
           bin/nur index nur-index > index.json
 
           cd "$FLAKEDIR"
