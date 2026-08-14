@@ -28,7 +28,7 @@ src.git = "https://github.com/vastsa/FileCodeBoxFronted.git"
 [foundation-sunshine]
 fetch.github = "AlkaidLab/foundation-sunshine"
 src.github_tag = "AlkaidLab/foundation-sunshine"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+\\.[^|A-Za-z]+$"
+src.include_regex = '^v[0-9]+\.[0-9]+\.[0-9]+\.[^|A-Za-z]+$'
 git.fetchSubmodules = true
 
 [hubproxy]
