@@ -56,7 +56,7 @@ buildGoModule (finalAttrs: {
     "-X main.Version=${finalAttrs.version}"
   ];
 
-  vendorHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+  vendorHash = "sha256-vQLkd/Z9tLNSu9j9HXfaDbrkP5qfQylyqhcg8KEjMOY=";
 
   meta = {
     changelog = "https://github.com/sky22333/hubproxy/releases/tag/v${finalAttrs.version}";
