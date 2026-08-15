@@ -30,7 +30,7 @@ stdenv.mkDerivation rec {
     owner = "home-assistant-tools";
     repo = "imou-life";
     rev = "2e5617002637671b478ff6df82f7d615c58f6a40";
-    hash = "sha256-0fkl7s4y0dy09xr71idxhg9f17v2akrvwcqm9jznywrzn7f7q68d=";
+    hash = "sha256-0fkl7s4y0dy09xr71idxhg9f17v2akrvwcqm9jznywrzn7f7q68d";
   };
 
   sourceRoot = "source/deploy/dockge/imou-bridge";
