@@ -174,12 +174,12 @@
             "name": null,
             "owner": "zhyiheihei",
             "repo": "navdash",
-            "rev": "v0.3.0",
-            "sha256": "sha256-M3RxqaXokpp64Kr2NzTnsqLXOamDXFh4VdjjPVNXynM=",
+            "rev": "v0.3.1",
+            "sha256": "sha256-PvWes72Bmzd2l8qg2N5xGi342zjMA4Ak7KYGDUWO0zg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.0"
+        "version": "v0.3.1"
     },
     "nexus-media": {
         "cargoLock": null,
