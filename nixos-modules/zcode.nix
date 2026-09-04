@@ -4,6 +4,7 @@
 # ../pkgs/uncategorized/zcode，逻辑不重复落在上层仓库。
 {
   self,
+  config,
   lib,
   pkgs,
   ...
