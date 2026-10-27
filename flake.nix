@@ -82,13 +82,30 @@
                   pkgs = prev;
                   inherit inputs;
                 };
+                _legacyPackages = import ./pkgs "legacy" {
+                  pkgs = prev;
+                  inherit inputs;
+                };
               in
-              _packages;
+              _packages
+              // rec {
+                # Integrate to nixpkgs python3Packages
+                python = prev.python.override {
+                  packageOverrides = final: prev: _legacyPackages.python3Packages;
+                };
+                python3 = prev.python3.override {
+                  packageOverrides = final: prev: _legacyPackages.python3Packages;
+                };
+                python3Packages = python3.pkgs;
+              };
             inSubTree = final: prev: {
               nur-zhyiheihei = import ./pkgs null {
                 pkgs = prev;
                 inherit inputs;
               };
+            };
+            inSubTree-pinnedNixpkgs = final: prev: {
+              nur-zhyiheihei = self.legacyPackages.${final.stdenv.hostPlatform.system};
             };
           };
 
