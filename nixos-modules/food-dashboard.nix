@@ -33,6 +33,9 @@ let
   '';
 
   commonEnvironment = {
+    # dbus-fast 默认连 /var/run/dbus/system_bus_socket；chroot 里只有 /run/dbus，
+    # 不指路扫描就直接 ENOENT。
+    DBUS_SYSTEM_BUS_ADDRESS = "unix:path=/run/dbus/system_bus_socket";
     # 数据库/角色统一下划线名（psycopg DSN 免引号；ensureUsers 断言要求 db 与 role 同名）
     EPD_FOOD_DSN = "host=/run/postgresql dbname=epd_dashboard";
     EPD_FOOD_FONT_PATH = "${fontFile}";
