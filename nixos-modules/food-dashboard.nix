@@ -222,6 +222,12 @@ in
     };
     users.groups.epd_dashboard = { };
 
+    # textfile 目录通常由采集方（root）建，用 ACL 给服务用户写权限：
+    # 不改 mode/owner，不与其它模块的 tmpfiles 规则互盖。
+    systemd.tmpfiles.settings."epd-food-metrics" = lib.mkIf (cfg.textfilePath != "") {
+      ${builtins.dirOf cfg.textfilePath}."a+".argument = "u:epd_dashboard:rwx";
+    };
+
     # 命名空间独立保留策略：容量小、保留久
     environment.etc."systemd/journald@${cfg.logNamespace}.conf" = lib.mkIf (cfg.logNamespace != "") {
       text = ''
