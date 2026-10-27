@@ -99,15 +99,15 @@
 
             # ZCode 桌面应用（包在 pkgs/uncategorized/zcode）。上层仓库只
             # import 本模块并设 lantian.zcode.enable，不再重复逻辑。
-            zcode = import ./nixos-modules/zcode.nix self;
+            zcode = import ./modules/zcode.nix self;
 
             # EPD 家庭食品存储看板（包在 pkgs/uncategorized/epd-food-server）。
             # 上层仓库 import 后设 lantian.food-dashboard.enable。
-            food-dashboard = import ./nixos-modules/food-dashboard.nix self;
+            food-dashboard = import ./modules/food-dashboard.nix self;
 
             # 青简输入法（包在 pkgs/uncategorized/qingjian）。
             # 上层仓库 import 后设 lantian.qingjian.enable。
-            qingjian = import ./nixos-modules/qingjian.nix self;
+            qingjian = import ./modules/qingjian.nix self;
           };
 
           hydraJobs.packages.x86_64-linux = self.hydraPackages.x86_64-linux;
